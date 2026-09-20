@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { destinationsData } from '../data/destinationsData';
 import { packagesData } from '../data/packagesData';
+import { toCitySlug } from '../data/citiesData';
 import './HolidaysPage.css';
 
 export default function HolidaysPage({ navigate, onOpenEnquiry }) {
@@ -130,10 +131,23 @@ export default function HolidaysPage({ navigate, onOpenEnquiry }) {
                     <span className="cities-preview-label">Featured Havens:</span>
                     <div className="cities-preview-tags">
                       {state.cities.slice(0, 4).map((c, i) => (
-                        <span key={i} className="city-mini-tag">{c.name}</span>
+                        <button 
+                          key={i} 
+                          className="city-mini-tag"
+                          onClick={() => navigate('city', { stateId: state.id, citySlug: toCitySlug(c.name) })}
+                          title={`Explore ${c.name} Destination Guide`}
+                        >
+                          {c.name}
+                        </button>
                       ))}
                       {state.cities.length > 4 && (
-                        <span className="city-more-tag">+{state.cities.length - 4} more</span>
+                        <button 
+                          className="city-more-tag"
+                          onClick={() => navigate('state', state.id)}
+                          title={`View all ${state.cities.length} havens in ${state.name}`}
+                        >
+                          +{state.cities.length - 4} more
+                        </button>
                       )}
                     </div>
                   </div>

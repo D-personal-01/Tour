@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getStateById, destinationsData } from '../data/destinationsData';
+import { toCitySlug } from '../data/citiesData';
 import './StatePage.css';
 
 export default function StatePage({ stateId, navigate, onOpenEnquiry }) {
@@ -188,42 +189,85 @@ export default function StatePage({ stateId, navigate, onOpenEnquiry }) {
 
           {/* Spacious Cities Grid */}
           <div className="spacious-cities-grid">
-            {state.cities.map((city, idx) => (
-              <div key={idx} className="spacious-city-card bespoke-card">
-                <div className="city-card-top">
-                  <div className="city-num-badge" style={{ color: state.theme.accent, borderColor: state.theme.badgeBorder }}>
-                    {String(idx + 1).padStart(2, '0')}
+            {state.cities.map((city, idx) => {
+              const citySlug = toCitySlug(city.name);
+              return (
+                <div 
+                  key={idx} 
+                  className="spacious-city-card bespoke-card"
+                  onClick={() => navigate('city', { stateId: state.id, citySlug })}
+                  style={{ cursor: 'pointer' }}
+                  role="button"
+                  tabIndex={0}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter') navigate('city', { stateId: state.id, citySlug });
+                  }}
+                  aria-label={`Explore ${city.name} full destination guide`}
+                >
+                  <div className="city-card-top">
+                    <div className="city-num-badge" style={{ color: state.theme.accent, borderColor: state.theme.badgeBorder }}>
+                      {String(idx + 1).padStart(2, '0')}
+                    </div>
+                    <div className="city-title-meta">
+                      <h3 className="city-title">{city.name}</h3>
+                      <span className="city-state-label">{state.name}</span>
+                    </div>
                   </div>
-                  <div className="city-title-meta">
-                    <h3 className="city-title">{city.name}</h3>
-                    <span className="city-state-label">{state.name}</span>
+
+                  <div className="city-highlight-banner" style={{ background: state.theme.accentMuted }}>
+                    <span className="highlight-kicker" style={{ color: state.theme.accent }}>SIGNATURE HIGHLIGHT</span>
+                    <p className="highlight-quote">{city.highlight}</p>
+                  </div>
+
+                  <p className="city-narrative">{city.description}</p>
+
+                  <div className="city-meta-tags">
+                    <span className="meta-tag-label">Ideal For:</span>
+                    <span className="meta-tag-value">{city.bestFor}</span>
+                  </div>
+
+                  <div className="city-footer-action">
+                    <button 
+                      className="city-plan-btn"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        navigate('city', { stateId: state.id, citySlug });
+                      }}
+                      style={{ 
+                        borderColor: state.theme.accent, 
+                        background: state.theme.accent, 
+                        color: '#070B12', 
+                        fontWeight: '700' 
+                      }}
+                    >
+                      <span>Explore {city.name} Guide & Places</span>
+                      <span className="city-arrow" aria-hidden="true">→</span>
+                    </button>
+                    <button 
+                      className="city-inquire-quick-link"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        onOpenEnquiry({ destination: `${city.name}, ${state.name}` });
+                      }}
+                      style={{ 
+                        background: 'transparent', 
+                        border: 'none', 
+                        color: 'var(--text-muted)', 
+                        fontSize: '0.8rem', 
+                        cursor: 'pointer',
+                        textDecoration: 'underline',
+                        padding: '0.4rem 0',
+                        display: 'inline-block',
+                        marginTop: '0.5rem',
+                        textAlign: 'center'
+                      }}
+                    >
+                      Quick Enquiry
+                    </button>
                   </div>
                 </div>
-
-                <div className="city-highlight-banner" style={{ background: state.theme.accentMuted }}>
-                  <span className="highlight-kicker" style={{ color: state.theme.accent }}>SIGNATURE HIGHLIGHT</span>
-                  <p className="highlight-quote">{city.highlight}</p>
-                </div>
-
-                <p className="city-narrative">{city.description}</p>
-
-                <div className="city-meta-tags">
-                  <span className="meta-tag-label">Ideal For:</span>
-                  <span className="meta-tag-value">{city.bestFor}</span>
-                </div>
-
-                <div className="city-footer-action">
-                  <button 
-                    className="city-plan-btn"
-                    onClick={() => onOpenEnquiry({ destination: `${city.name}, ${state.name}` })}
-                    style={{ borderColor: state.theme.badgeBorder }}
-                  >
-                    <span>Inquire for {city.name}</span>
-                    <span className="city-arrow" aria-hidden="true">→</span>
-                  </button>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           {/* Spacious Multi-City Combination Banner */}

@@ -8,13 +8,17 @@ import B2BModal from './components/B2BModal';
 import HomePage from './pages/HomePage';
 import HolidaysPage from './pages/HolidaysPage';
 import StatePage from './pages/StatePage';
+import CityPage from './pages/CityPage';
 import InsurancePage from './pages/InsurancePage';
 import BlogDetailPage from './pages/BlogDetailPage';
 import ServicePage from './pages/ServicePage';
+import { toCitySlug } from './data/citiesData';
 
 export default function App() {
   const [route, setRoute] = useState('home');
   const [selectedStateId, setSelectedStateId] = useState('rajasthan');
+  const [selectedCityStateId, setSelectedCityStateId] = useState('rajasthan');
+  const [selectedCitySlug, setSelectedCitySlug] = useState('udaipur');
   const [selectedBlogSlug, setSelectedBlogSlug] = useState('5-hidden-gems-in-coimbatore');
   const [theme, setTheme] = useState(() => {
     // Default to 'light' theme for open, spacious aesthetic
@@ -56,6 +60,12 @@ export default function App() {
 
       if (main === 'holidays') {
         setRoute('holidays');
+      } else if (main === 'city' && param) {
+        setRoute('city');
+        setSelectedCityStateId(param);
+        if (parts[2]) {
+          setSelectedCitySlug(parts[2]);
+        }
       } else if (main === 'state' && param) {
         setRoute('state');
         setSelectedStateId(param);
@@ -84,6 +94,13 @@ export default function App() {
     } else if (toRoute === 'holidays') {
       window.location.hash = '#/holidays';
       setRoute('holidays');
+    } else if (toRoute === 'city') {
+      const stateId = (param && param.stateId) ? param.stateId : 'rajasthan';
+      const citySlug = (param && param.citySlug) ? param.citySlug : 'udaipur';
+      window.location.hash = `#/city/${stateId}/${citySlug}`;
+      setSelectedCityStateId(stateId);
+      setSelectedCitySlug(citySlug);
+      setRoute('city');
     } else if (toRoute === 'state') {
       const stateSlug = param || 'rajasthan';
       window.location.hash = `#/state/${stateSlug}`;
@@ -140,6 +157,15 @@ export default function App() {
       {route === 'state' && (
         <StatePage 
           stateId={selectedStateId} 
+          navigate={navigate} 
+          onOpenEnquiry={handleOpenEnquiry}
+        />
+      )}
+
+      {route === 'city' && (
+        <CityPage 
+          stateId={selectedCityStateId} 
+          citySlug={selectedCitySlug} 
           navigate={navigate} 
           onOpenEnquiry={handleOpenEnquiry}
         />

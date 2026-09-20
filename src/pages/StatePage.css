@@ -196,20 +196,22 @@
   align-items: center;
   gap: 0.75rem;
   padding: 0.5rem 0.65rem;
-  background: rgba(255, 255, 255, 0.94);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid var(--border-card);
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.28);
   border-radius: var(--radius-pill);
-  box-shadow: 0 12px 32px rgba(18, 22, 32, 0.08);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
   overflow-x: auto;
   max-width: calc(100vw - 4rem);
 }
 
 [data-theme="dark"] .hero-floating-pills {
-  background: rgba(14, 20, 32, 0.75);
-  border-color: rgba(255, 255, 255, 0.14);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  background: rgba(7, 11, 18, 0.32);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
 }
 
 @media (max-width: 768px) {
@@ -430,6 +432,10 @@
 
 .city-footer-action {
   margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
 }
 
 .city-plan-btn {
@@ -446,6 +452,16 @@
   font-weight: 600;
   border-radius: var(--radius-pill);
   transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.city-plan-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+}
+
+.city-inquire-quick-link:hover {
+  color: var(--state-accent) !important;
 }
 
 .city-plan-btn:hover {

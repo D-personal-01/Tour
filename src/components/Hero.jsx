@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { destinationsData } from '../data/destinationsData';
+import { toCitySlug } from '../data/citiesData';
 import './Hero.css';
 
 export default function Hero({ navigate, onOpenEnquiry }) {
@@ -26,18 +27,37 @@ export default function Hero({ navigate, onOpenEnquiry }) {
   const handleSelectSuggestion = (suggestion) => {
     setSearchQuery(suggestion.label);
     setShowSuggestions(false);
-    navigate('state', suggestion.stateId);
+    if (suggestion.type === 'City' && suggestion.cityName) {
+      navigate('city', { stateId: suggestion.stateId, citySlug: toCitySlug(suggestion.cityName) });
+    } else {
+      navigate('state', suggestion.stateId);
+    }
   };
 
   const handleSearchSubmit = (e) => {
     e.preventDefault();
     if (searchQuery.trim() !== '') {
-      const found = destinationsData.find(s => 
-        s.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        s.cities.some(c => c.name.toLowerCase().includes(searchQuery.toLowerCase()))
-      );
-      if (found) {
-        navigate('state', found.id);
+      const q = searchQuery.trim().toLowerCase();
+      // Check for exact city match first
+      for (const s of destinationsData) {
+        const foundCity = s.cities.find(c => c.name.toLowerCase() === q);
+        if (foundCity) {
+          navigate('city', { stateId: s.id, citySlug: toCitySlug(foundCity.name) });
+          return;
+        }
+      }
+      // Check for partial city match
+      for (const s of destinationsData) {
+        const foundCity = s.cities.find(c => c.name.toLowerCase().includes(q));
+        if (foundCity) {
+          navigate('city', { stateId: s.id, citySlug: toCitySlug(foundCity.name) });
+          return;
+        }
+      }
+      // Check for state match
+      const foundState = destinationsData.find(s => s.name.toLowerCase().includes(q));
+      if (foundState) {
+        navigate('state', foundState.id);
         return;
       }
     }
