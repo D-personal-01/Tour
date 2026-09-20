@@ -1,4 +1,4 @@
-/* Luxury Navbar Styles matching screenshot */
+/* Luxury Navbar Styles matching screenshot - High Visibility & Crisp Definition */
 
 .bespoke-navbar {
   position: fixed;
@@ -7,37 +7,37 @@
   right: 0;
   z-index: 1000;
   padding: 1.15rem 0;
-  background: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(20px) saturate(160%);
-  -webkit-backdrop-filter: blur(20px) saturate(160%);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.28);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border-bottom: 1.5px solid rgba(200, 164, 93, 0.32);
+  box-shadow: 0 4px 24px rgba(18, 22, 32, 0.08);
   transition: all var(--transition-smooth);
 }
 
 .bespoke-navbar.scrolled {
   padding: 0.8rem 0;
-  background: rgba(255, 255, 255, 0.32);
-  backdrop-filter: blur(20px) saturate(160%);
-  -webkit-backdrop-filter: blur(20px) saturate(160%);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.28);
-  box-shadow: 0 6px 22px rgba(18, 22, 32, 0.04);
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(28px) saturate(200%);
+  -webkit-backdrop-filter: blur(28px) saturate(200%);
+  border-bottom: 1.5px solid rgba(200, 164, 93, 0.42);
+  box-shadow: 0 8px 30px rgba(18, 22, 32, 0.12);
 }
 
 [data-theme="dark"] .bespoke-navbar {
-  background: rgba(7, 11, 18, 0.32);
-  backdrop-filter: blur(20px) saturate(160%);
-  -webkit-backdrop-filter: blur(20px) saturate(160%);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  background: rgba(10, 15, 26, 0.84);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border-bottom: 1.5px solid rgba(200, 164, 93, 0.28);
+  box-shadow: 0 4px 28px rgba(0, 0, 0, 0.55);
 }
 
 [data-theme="dark"] .bespoke-navbar.scrolled {
-  background: rgba(7, 11, 18, 0.36);
-  backdrop-filter: blur(20px) saturate(160%);
-  -webkit-backdrop-filter: blur(20px) saturate(160%);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+  background: rgba(7, 11, 18, 0.95);
+  backdrop-filter: blur(28px) saturate(200%);
+  -webkit-backdrop-filter: blur(28px) saturate(200%);
+  border-bottom: 1.5px solid rgba(200, 164, 93, 0.35);
+  box-shadow: 0 10px 36px rgba(0, 0, 0, 0.75);
 }
 
 .navbar-inner {
@@ -80,8 +80,8 @@
 
 .logo-title {
   font-family: var(--font-serif);
-  font-size: 1.15rem;
-  font-weight: 600;
+  font-size: 1.18rem;
+  font-weight: 700;
   letter-spacing: 0.06em;
   color: var(--text-primary);
   line-height: 1.15;
@@ -99,21 +99,40 @@
 .desktop-nav {
   display: flex;
   align-items: center;
-  gap: 1.35rem;
+  gap: 1.4rem;
 }
 
 .nav-link {
-  font-size: 0.86rem;
-  font-weight: 500;
-  color: var(--text-secondary);
-  padding: 0.4rem 0.2rem;
-  transition: color var(--transition-fast);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  padding: 0.4rem 0.25rem;
+  transition: all var(--transition-fast);
   letter-spacing: 0.02em;
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
-.nav-link:hover,
+.nav-link:hover {
+  color: var(--accent-gold);
+}
+
 .nav-link.active {
   color: var(--accent-gold);
+  font-weight: 700;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0.25rem;
+  right: 0.25rem;
+  height: 2.5px;
+  background: var(--accent-gold);
+  border-radius: 2px;
 }
 
 /* Navbar Actions */
@@ -225,22 +244,22 @@
     top: 70px;
     left: 0;
     right: 0;
-    background: rgba(255, 255, 255, 0.35);
-    backdrop-filter: blur(20px) saturate(160%);
-    -webkit-backdrop-filter: blur(20px) saturate(160%);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.28);
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    border-bottom: 1.5px solid rgba(200, 164, 93, 0.35);
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s ease-in-out;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.12);
   }
 
   [data-theme="dark"] .mobile-nav-drawer {
-    background: rgba(7, 11, 18, 0.4);
-    backdrop-filter: blur(20px) saturate(160%);
-    -webkit-backdrop-filter: blur(20px) saturate(160%);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    background: rgba(10, 15, 26, 0.94);
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    border-bottom: 1.5px solid rgba(200, 164, 93, 0.28);
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.55);
   }
 
   .mobile-nav-drawer.open {
