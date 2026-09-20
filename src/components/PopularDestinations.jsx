@@ -29,12 +29,12 @@ export default function PopularDestinations({ navigate }) {
           </p>
         </div>
 
-        {/* Region Filter Bar */}
+        {/* Region Filter Bar with Pill Buttons */}
         <div className="destination-filters" role="tablist" aria-label="Region filters">
           {regions.map((reg) => (
             <button
               key={reg}
-              className={`filter-btn ${selectedRegion === reg ? 'active' : ''}`}
+              className={`filter-pill ${selectedRegion === reg ? 'active' : ''}`}
               onClick={() => setSelectedRegion(reg)}
               role="tab"
               aria-selected={selectedRegion === reg}
@@ -44,7 +44,7 @@ export default function PopularDestinations({ navigate }) {
           ))}
         </div>
 
-        {/* Destination Cards Grid */}
+        {/* Spacious Destination Cards Grid */}
         <div className="destinations-grid">
           {displayedStates.map((state) => {
             const cityNames = state.cities.map(c => c.name).slice(0, 3).join(', ');
@@ -80,7 +80,7 @@ export default function PopularDestinations({ navigate }) {
                         color: state.theme.accent 
                       }}
                     >
-                      {state.cities.length} Cities / Destinations
+                      {state.cities.length} Cities / Havens
                     </span>
                   </div>
                 </div>
@@ -95,8 +95,8 @@ export default function PopularDestinations({ navigate }) {
 
                   <div className="dest-card-footer">
                     <span className="dest-explore-link" style={{ color: state.theme.accent }}>
-                      Explore State & Cities
-                      <span className="dest-arrow-symbol" aria-hidden="true">›</span>
+                      <span>Explore State & Cities</span>
+                      <span className="dest-arrow-symbol" aria-hidden="true">→</span>
                     </span>
                   </div>
                 </div>
@@ -108,7 +108,7 @@ export default function PopularDestinations({ navigate }) {
         {/* Toggle All 28 States & UTs Button */}
         <div className="view-all-states-cta">
           <button 
-            className="btn-outline view-all-btn"
+            className="btn-pill-glass view-all-btn"
             onClick={() => setShowAllStates(!showAllStates)}
           >
             {showAllStates 

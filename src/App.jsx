@@ -14,9 +14,14 @@ import ServicePage from './pages/ServicePage';
 export default function App() {
   const [route, setRoute] = useState('home');
   const [selectedStateId, setSelectedStateId] = useState('rajasthan');
-  const [selectedBlogSlug, setSelectedBlogSlug] = useState('5-hidden-gems-in-coimbatore');
   const [theme, setTheme] = useState(() => {
-    return localStorage.getItem('bespoke_theme') || 'dark';
+    // Default to 'light' theme for open, spacious aesthetic
+    const saved = localStorage.getItem('bespoke_theme');
+    if (!saved || saved === 'dark') {
+      localStorage.setItem('bespoke_theme', 'light');
+      return 'light';
+    }
+    return saved;
   });
 
   const [enquiryModalOpen, setEnquiryModalOpen] = useState(false);

@@ -1,13 +1,13 @@
 /* Footer Styles */
 
 .bespoke-footer {
-  background: #070A0F;
-  border-top: 1px solid var(--border-subtle);
+  background: #F7F5F0;
+  border-top: 1px solid var(--border-card);
   color: var(--text-secondary);
 }
 
-[data-theme="light"] .bespoke-footer {
-  background: #ECE7DE;
+[data-theme="dark"] .bespoke-footer {
+  background: #070A0F;
   border-top: 1px solid var(--border-subtle);
 }
 

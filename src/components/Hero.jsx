@@ -9,7 +9,7 @@ export default function Hero({ navigate, onOpenEnquiry }) {
   const [selectedDuration, setSelectedDuration] = useState('5-7 Days');
   const [guestCount, setGuestCount] = useState(2);
 
-  // Search filtering over all 28 states and 100+ cities
+  // Search filtering over all states and cities
   const filteredSuggestions = searchQuery.trim() === '' ? [] : destinationsData.flatMap(state => {
     const matches = [];
     if (state.name.toLowerCase().includes(searchQuery.toLowerCase())) {
@@ -26,14 +26,12 @@ export default function Hero({ navigate, onOpenEnquiry }) {
   const handleSelectSuggestion = (suggestion) => {
     setSearchQuery(suggestion.label);
     setShowSuggestions(false);
-    // Navigate straight to the state page!
     navigate('state', suggestion.stateId);
   };
 
   const handleSearchSubmit = (e) => {
     e.preventDefault();
     if (searchQuery.trim() !== '') {
-      // Find matching state
       const found = destinationsData.find(s => 
         s.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         s.cities.some(c => c.name.toLowerCase().includes(searchQuery.toLowerCase()))
@@ -51,26 +49,25 @@ export default function Hero({ navigate, onOpenEnquiry }) {
       <div className="hero-bg-overlay"></div>
       
       <div className="bespoke-container hero-content">
-        <div className="hero-header-badge">
-          <span className="hero-star-icon">✦</span>
-          <span>CURATING EXTRAORDINARY INDIAN EXPERIENCES SINCE 2010</span>
-          <span className="hero-star-icon">✦</span>
+        <div className="pill-badge hero-header-badge">
+          <span>CURATING EXTRAORDINARY JOURNEYS SINCE 2010</span>
         </div>
 
         <h1 className="hero-headline">
-          Crafted Journeys for Families, Honeymoons & Solo Explorers
+          Where Extraordinary Journeys<br />
+          Begin <span className="hero-gold-script">With You.</span>
         </h1>
 
         <p className="hero-subtext">
-          Bespoke is a promise. From private heritage forts in Rajasthan and quiet backwater houseboats in Kerala, to high-altitude Himalayan glamping and coral atoll retreats.
+          Handcrafted private itineraries tailored to your desires, from the heritage palaces of Rajasthan and misty backwaters of Kerala, to high Himalayan passes and secluded coral atolls.
         </p>
 
-        {/* Concierge Search Bar Module */}
-        <div className="hero-search-wrapper bespoke-card">
-          {/* Service Tabs */}
+        {/* Streamlined Airy Search Module */}
+        <div className="hero-search-wrapper">
+          {/* Frosted Pill Service Tabs */}
           <div className="search-tabs" role="tablist">
             <button 
-              className={`search-tab ${activeTab === 'holidays' ? 'active' : ''}`}
+              className={`search-tab-pill ${activeTab === 'holidays' ? 'active' : ''}`}
               onClick={() => setActiveTab('holidays')}
               role="tab"
               aria-selected={activeTab === 'holidays'}
@@ -78,7 +75,7 @@ export default function Hero({ navigate, onOpenEnquiry }) {
               Holidays
             </button>
             <button 
-              className={`search-tab ${activeTab === 'hotels' ? 'active' : ''}`}
+              className={`search-tab-pill ${activeTab === 'hotels' ? 'active' : ''}`}
               onClick={() => setActiveTab('hotels')}
               role="tab"
               aria-selected={activeTab === 'hotels'}
@@ -86,23 +83,23 @@ export default function Hero({ navigate, onOpenEnquiry }) {
               Hotels & Palaces
             </button>
             <button 
-              className={`search-tab ${activeTab === 'flights' ? 'active' : ''}`}
+              className={`search-tab-pill ${activeTab === 'flights' ? 'active' : ''}`}
               onClick={() => setActiveTab('flights')}
               role="tab"
               aria-selected={activeTab === 'flights'}
             >
-              Flight Concierge
+              Flights
             </button>
             <button 
-              className={`search-tab ${activeTab === 'taxis' ? 'active' : ''}`}
-              onClick={() => setActiveTab('taxis')}
+              className={`search-tab-pill ${activeTab === 'visa' ? 'active' : ''}`}
+              onClick={() => setActiveTab('visa')}
               role="tab"
-              aria-selected={activeTab === 'taxis'}
+              aria-selected={activeTab === 'visa'}
             >
-              Chauffeured Fleet
+              Visa
             </button>
             <button 
-              className={`search-tab ${activeTab === 'cruises' ? 'active' : ''}`}
+              className={`search-tab-pill ${activeTab === 'cruises' ? 'active' : ''}`}
               onClick={() => setActiveTab('cruises')}
               role="tab"
               aria-selected={activeTab === 'cruises'}
@@ -111,7 +108,7 @@ export default function Hero({ navigate, onOpenEnquiry }) {
             </button>
           </div>
 
-          {/* Dynamic Form Inputs */}
+          {/* Form Inputs with Clean Spacious Layout */}
           <form className="search-form-grid" onSubmit={handleSearchSubmit}>
             {/* Destination Field with Live Autocomplete */}
             <div className="search-field destination-field">
@@ -168,10 +165,10 @@ export default function Hero({ navigate, onOpenEnquiry }) {
                   value={selectedDuration} 
                   onChange={(e) => setSelectedDuration(e.target.value)}
                 >
-                  <option value="3-4 Days">3 - 4 Days (Short Getaway)</option>
-                  <option value="5-7 Days">5 - 7 Days (Curated Tour)</option>
-                  <option value="8-12 Days">8 - 12 Days (Grand Expedition)</option>
-                  <option value="Custom">Custom Duration</option>
+                  <option value="3-4 Days">3 - 4 Days</option>
+                  <option value="5-7 Days">5 - 7 Days</option>
+                  <option value="8-12 Days">8 - 12 Days</option>
+                  <option value="Custom">Custom</option>
                 </select>
               </div>
             </div>
@@ -191,19 +188,20 @@ export default function Hero({ navigate, onOpenEnquiry }) {
                   value={guestCount} 
                   onChange={(e) => setGuestCount(Number(e.target.value))}
                 >
-                  <option value={1}>1 Solo Explorer</option>
-                  <option value={2}>2 Adults (Couple / Honeymoon)</option>
+                  <option value={1}>1 Solo</option>
+                  <option value={2}>2 Adults</option>
                   <option value={3}>3 Guests</option>
-                  <option value={4}>4 Guests (Family Suite)</option>
-                  <option value={6}>5+ Guests (Private Villa)</option>
+                  <option value={4}>4 Guests (Family)</option>
+                  <option value={6}>5+ Group</option>
                 </select>
               </div>
             </div>
 
             {/* Search CTA */}
             <div className="search-field search-action">
-              <button type="submit" className="btn-primary search-submit-btn">
-                Plan My Journey
+              <button type="submit" className="btn-pill-gold search-submit-btn">
+                <span>Plan My Journey</span>
+                <span aria-hidden="true">→</span>
               </button>
             </div>
           </form>
@@ -216,11 +214,11 @@ export default function Hero({ navigate, onOpenEnquiry }) {
           </div>
           <div className="proof-dot">•</div>
           <div className="proof-pill">
-            <span className="proof-accent">100%</span> Handcrafted Tailor-Made Itineraries
+            <span className="proof-accent">100%</span> Private Handcrafted Itineraries
           </div>
           <div className="proof-dot">•</div>
           <div className="proof-pill">
-            <span className="proof-accent">24/7</span> Dedicated On-Ground Concierge
+            <span className="proof-accent">24/7</span> Dedicated On-Trip Concierge
           </div>
         </div>
       </div>
