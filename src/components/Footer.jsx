@@ -139,6 +139,7 @@ export default function Footer({ navigate, onOpenEnquiry, onOpenB2B }) {
           <div className="footer-col">
             <h4 className="footer-col-title">Services</h4>
             <ul className="footer-links">
+              <li><button onClick={() => navigate('holidays')}>Curated Domestic Holidays</button></li>
               <li><button onClick={() => navigate('service-hotels')}>Heritage Palace Stays</button></li>
               <li><button onClick={() => navigate('service-flights')}>Private Flight Concierge</button></li>
               <li><button onClick={() => navigate('service-taxis')}>Chauffeured Fleet</button></li>

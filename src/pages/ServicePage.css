@@ -19,11 +19,7 @@
 .service-hero-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at center 30%, rgba(253, 253, 251, 0.75) 0%, rgba(253, 253, 251, 0.96) 90%);
-}
-
-[data-theme="dark"] .service-hero-overlay {
-  background: radial-gradient(circle at center 30%, rgba(11, 15, 21, 0.7) 0%, rgba(11, 15, 21, 0.96) 90%);
+  background: linear-gradient(180deg, rgba(7, 11, 18, 0.4) 0%, rgba(7, 11, 18, 0.75) 100%);
 }
 
 .service-hero-content {
@@ -39,32 +35,40 @@
   justify-content: center;
   gap: 0.5rem;
   font-size: 0.82rem;
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.8);
   margin-bottom: 1.5rem;
 }
 
 .service-breadcrumbs button {
-  color: var(--text-secondary);
+  color: #FFFFFF;
 }
 
 .service-breadcrumbs button:hover {
   color: var(--accent-gold);
 }
 
+.service-breadcrumbs .bread-current {
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 500;
+}
+
 .service-tag {
   display: inline-block;
   font-size: 0.74rem;
   font-weight: 700;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.16em;
   color: var(--accent-gold);
   margin-bottom: 0.6rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 .service-headline {
-  font-size: 3rem;
-  line-height: 1.25;
-  color: var(--text-primary);
+  font-size: 3.25rem;
+  line-height: 1.2;
+  color: #FFFFFF;
+  font-weight: 700;
   margin-bottom: 0.6rem;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.85), 0 2px 6px rgba(0, 0, 0, 0.95);
 }
 
 @media (max-width: 768px) {
@@ -74,11 +78,13 @@
 }
 
 .service-desc {
-  font-size: 1.1rem;
-  color: var(--text-secondary);
-  line-height: 1.7;
-  max-width: 800px;
-  margin: 0 auto 2rem auto;
+  font-size: 1.15rem;
+  color: #FFFFFF;
+  font-weight: 500;
+  line-height: 1.75;
+  max-width: 820px;
+  margin: 0 auto 2.25rem auto;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.85), 0 1px 3px rgba(0, 0, 0, 0.95);
 }
 
 /* Offerings Grid */

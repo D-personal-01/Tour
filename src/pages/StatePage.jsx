@@ -13,8 +13,7 @@ export default function StatePage({ stateId, navigate, onOpenEnquiry }) {
   const handleBottomTabClick = (tabKey) => {
     setActiveBottomTab(tabKey);
     if (tabKey === 'holidays') {
-      const el = document.getElementById('state-cities-section');
-      if (el) el.scrollIntoView({ behavior: 'smooth' });
+      navigate('holidays');
     } else if (tabKey === 'hotels') {
       navigate('service-hotels');
     } else if (tabKey === 'flights') {

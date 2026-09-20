@@ -59,8 +59,8 @@ export default function Navbar({ currentRoute, navigate, theme, toggleTheme, onO
             Home
           </button>
           <button 
-            className={`nav-link ${currentRoute === 'state' ? 'active' : ''}`}
-            onClick={() => handleNavClick('home', 'popular-destinations')}
+            className={`nav-link ${currentRoute === 'holidays' ? 'active' : ''}`}
+            onClick={() => handleNavClick('holidays')}
           >
             Holidays
           </button>
@@ -160,7 +160,7 @@ export default function Navbar({ currentRoute, navigate, theme, toggleTheme, onO
       <div className={`mobile-nav-drawer ${mobileMenuOpen ? 'open' : ''}`}>
         <div className="mobile-nav-links">
           <button onClick={() => handleNavClick('home')}>Home</button>
-          <button onClick={() => handleNavClick('home', 'popular-destinations')}>Holidays</button>
+          <button onClick={() => handleNavClick('holidays')}>Holidays</button>
           <button onClick={() => handleNavClick('service-hotels')}>Hotels</button>
           <button onClick={() => handleNavClick('service-flights')}>Flights</button>
           <button onClick={() => handleNavClick('service-visa')}>Visa Concierge</button>

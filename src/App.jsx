@@ -6,6 +6,7 @@ import EnquiryModal from './components/EnquiryModal';
 import B2BModal from './components/B2BModal';
 
 import HomePage from './pages/HomePage';
+import HolidaysPage from './pages/HolidaysPage';
 import StatePage from './pages/StatePage';
 import InsurancePage from './pages/InsurancePage';
 import BlogDetailPage from './pages/BlogDetailPage';
@@ -14,6 +15,7 @@ import ServicePage from './pages/ServicePage';
 export default function App() {
   const [route, setRoute] = useState('home');
   const [selectedStateId, setSelectedStateId] = useState('rajasthan');
+  const [selectedBlogSlug, setSelectedBlogSlug] = useState('5-hidden-gems-in-coimbatore');
   const [theme, setTheme] = useState(() => {
     // Default to 'light' theme for open, spacious aesthetic
     const saved = localStorage.getItem('bespoke_theme');
@@ -52,7 +54,9 @@ export default function App() {
       const main = parts[0];
       const param = parts[1];
 
-      if (main === 'state' && param) {
+      if (main === 'holidays') {
+        setRoute('holidays');
+      } else if (main === 'state' && param) {
         setRoute('state');
         setSelectedStateId(param);
       } else if (main === 'insurance') {
@@ -77,6 +81,9 @@ export default function App() {
     if (toRoute === 'home') {
       window.location.hash = '#/';
       setRoute('home');
+    } else if (toRoute === 'holidays') {
+      window.location.hash = '#/holidays';
+      setRoute('holidays');
     } else if (toRoute === 'state') {
       const stateSlug = param || 'rajasthan';
       window.location.hash = `#/state/${stateSlug}`;
@@ -120,6 +127,13 @@ export default function App() {
           navigate={navigate} 
           onOpenEnquiry={handleOpenEnquiry}
           onOpenB2B={() => setB2BModalOpen(true)}
+        />
+      )}
+
+      {route === 'holidays' && (
+        <HolidaysPage 
+          navigate={navigate} 
+          onOpenEnquiry={handleOpenEnquiry}
         />
       )}
 
