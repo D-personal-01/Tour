@@ -1,0 +1,451 @@
+/* Insurance Page Styles */
+
+.insurance-page {
+  padding-top: 5rem;
+  background: var(--bg-base);
+}
+
+.insurance-hero {
+  padding: 5rem 0 3.5rem 0;
+  background: radial-gradient(circle at top, rgba(200, 164, 93, 0.12) 0%, transparent 70%);
+  text-align: center;
+  border-bottom: 1px solid var(--border-card);
+}
+
+.insurance-breadcrumbs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+}
+
+.insurance-breadcrumbs button {
+  color: var(--text-secondary);
+}
+
+.insurance-breadcrumbs button:hover {
+  color: var(--accent-gold);
+}
+
+.insurance-tag {
+  display: inline-block;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--accent-gold);
+  margin-bottom: 0.6rem;
+}
+
+.insurance-title {
+  font-size: 3rem;
+  color: var(--text-primary);
+  margin-bottom: 0.6rem;
+}
+
+@media (max-width: 768px) {
+  .insurance-title {
+    font-size: 2.2rem;
+  }
+}
+
+.insurance-subtext {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Calculator Section */
+.calculator-wrapper {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 3rem;
+  padding: 3rem;
+  border-color: var(--border-subtle);
+  background: linear-gradient(135deg, var(--bg-surface) 0%, var(--bg-elevated) 100%);
+}
+
+@media (max-width: 950px) {
+  .calculator-wrapper {
+    grid-template-columns: 1fr;
+    padding: 2rem;
+  }
+}
+
+.calc-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--accent-gold);
+  margin-bottom: 0.4rem;
+}
+
+.calc-title {
+  font-size: 2rem;
+  color: var(--text-primary);
+  margin-bottom: 0.4rem;
+}
+
+.calc-sub {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+}
+
+.calc-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1.75rem;
+}
+
+.calc-field label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.plan-buttons-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+}
+
+@media (max-width: 550px) {
+  .plan-buttons-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.calc-plan-btn {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: var(--radius-sm);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-card);
+  text-align: left;
+  transition: all var(--transition-fast);
+}
+
+.calc-plan-btn:hover {
+  border-color: var(--accent-gold);
+}
+
+.calc-plan-btn.active {
+  border-color: var(--accent-gold);
+  background: var(--accent-gold-muted);
+}
+
+.btn-plan-name {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.btn-plan-badge {
+  font-size: 0.72rem;
+  color: var(--accent-gold);
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.btn-plan-rate {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.calc-sliders-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 600px) {
+  .calc-sliders-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.calc-range-slider {
+  width: 100%;
+  accent-color: var(--accent-gold);
+  height: 6px;
+  background: var(--border-card);
+  border-radius: 3px;
+  outline: none;
+}
+
+.slider-limits {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+/* Summary Card */
+.calc-summary-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.summary-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.summary-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.summary-plan-badge {
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--accent-gold);
+}
+
+.summary-selected-name {
+  font-size: 1.45rem;
+  color: var(--text-primary);
+  margin-bottom: 0.35rem;
+}
+
+.summary-ideal-for {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+  margin-bottom: 1.5rem;
+}
+
+.summary-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  padding: 1rem;
+  background: var(--bg-elevated);
+  border-radius: var(--radius-sm);
+  margin-bottom: 1.5rem;
+}
+
+.breakdown-line {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+.breakdown-line strong {
+  color: var(--text-primary);
+}
+
+.accent-strong {
+  color: var(--accent-gold) !important;
+}
+
+.summary-price-total {
+  border-top: 1px solid var(--border-card);
+  padding-top: 1rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.total-calculation {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.grand-total-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  padding-top: 0.5rem;
+  border-top: 1px dashed var(--border-card);
+  margin-top: 0.35rem;
+}
+
+.grand-price {
+  font-size: 1.6rem;
+  color: var(--accent-gold);
+}
+
+.quote-action-btn {
+  width: 100%;
+  padding: 0.95rem;
+  font-size: 0.95rem;
+}
+
+.summary-guarantee {
+  font-size: 0.74rem;
+  color: var(--text-muted);
+  text-align: center;
+  margin-top: 0.75rem;
+}
+
+/* Comparison Table */
+.comparison-table-wrapper {
+  overflow-x: auto;
+  padding: 1.5rem;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 1.1rem 1.25rem;
+  border-bottom: 1px solid var(--border-card);
+}
+
+.feature-col {
+  width: 32%;
+}
+
+.feature-cell {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.table-header-plan {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.table-header-plan span {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.table-header-plan small {
+  font-size: 0.76rem;
+  color: var(--accent-gold);
+}
+
+.rec-pill {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: var(--accent-gold);
+  color: #0B0F15;
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-sm);
+  width: fit-content;
+  margin-bottom: 0.25rem;
+}
+
+.recommended-col {
+  background: var(--accent-gold-muted);
+}
+
+.recommended-cell {
+  background: rgba(200, 164, 93, 0.05);
+  font-weight: 600;
+  color: var(--accent-gold);
+}
+
+/* FAQs */
+.faq-accordion-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 860px;
+  margin: 0 auto 3.5rem auto;
+}
+
+.faq-item {
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: border-color var(--transition-fast);
+}
+
+.faq-item:hover {
+  border-color: var(--accent-gold);
+}
+
+.faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.faq-question h3 {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+}
+
+.faq-toggle-icon {
+  font-size: 1.5rem;
+  color: var(--accent-gold);
+  font-family: monospace;
+}
+
+.faq-answer {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-card);
+}
+
+.faq-answer p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+.insurance-help-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2.5rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+}
+
+@media (max-width: 768px) {
+  .insurance-help-box {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.help-box-content h3 {
+  font-size: 1.45rem;
+  margin-bottom: 0.4rem;
+}
+
+.help-box-content p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}

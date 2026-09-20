@@ -1,0 +1,235 @@
+/* Luxury Navbar Styles */
+
+.bespoke-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 1.15rem 0;
+  background: rgba(11, 15, 21, 0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border-subtle);
+  transition: all var(--transition-smooth);
+}
+
+[data-theme="light"] .bespoke-navbar {
+  background: rgba(248, 246, 241, 0.88);
+}
+
+.bespoke-navbar.scrolled {
+  padding: 0.75rem 0;
+  background: var(--bg-base);
+  box-shadow: var(--shadow-md);
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+/* Brand Logo */
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--text-primary);
+  text-align: left;
+}
+
+.logo-emblem {
+  color: var(--accent-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-title {
+  font-family: var(--font-serif);
+  font-size: 1.12rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--text-primary);
+}
+
+.logo-tagline {
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  color: var(--accent-gold);
+}
+
+/* Desktop Navigation */
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.nav-link {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  padding: 0.4rem 0.2rem;
+  position: relative;
+  transition: color var(--transition-fast);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--accent-gold);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: var(--accent-gold);
+  transition: width var(--transition-fast);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.b2b-nav {
+  color: var(--accent-gold);
+  font-weight: 600;
+}
+
+/* Navbar Actions */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.theme-toggle-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-card);
+  background: var(--bg-surface);
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+}
+
+.theme-toggle-btn:hover {
+  color: var(--accent-gold);
+  border-color: var(--accent-gold);
+}
+
+.enquire-now-btn {
+  padding: 0.65rem 1.35rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  min-height: 40px;
+}
+
+/* Mobile Toggle */
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 26px;
+  height: 20px;
+  padding: 0;
+}
+
+.hamburger-line {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: var(--text-primary);
+  border-radius: 2px;
+  transition: transform var(--transition-smooth), opacity var(--transition-smooth);
+}
+
+.hamburger-line.open:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger-line.open:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-line.open:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Mobile Drawer */
+.mobile-nav-drawer {
+  display: none;
+}
+
+@media (max-width: 1080px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  .mobile-nav-drawer {
+    display: block;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: var(--bg-surface);
+    border-bottom: 1px solid var(--border-subtle);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+    box-shadow: var(--shadow-md);
+  }
+
+  .mobile-nav-drawer.open {
+    max-height: 520px;
+  }
+
+  .mobile-nav-links {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+
+  .mobile-nav-links button {
+    text-align: left;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--border-card);
+  }
+
+  .mobile-nav-links button:hover {
+    color: var(--accent-gold);
+  }
+
+  .mobile-drawer-cta {
+    margin-top: 0.5rem;
+  }
+
+  .mobile-drawer-cta button {
+    width: 100%;
+    text-align: center;
+  }
+}

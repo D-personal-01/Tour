@@ -1,0 +1,369 @@
+/* State Experience Page Styles */
+
+.state-experience-page {
+  padding-top: 5rem;
+  background: var(--bg-base);
+}
+
+/* State Hero Banner */
+.state-hero-section {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  padding: 6rem 0 4rem 0;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.state-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center 30%, rgba(11, 15, 21, 0.65) 0%, rgba(11, 15, 21, 0.96) 90%);
+}
+
+[data-theme="light"] .state-hero-overlay {
+  background: radial-gradient(circle at center 30%, rgba(248, 246, 241, 0.72) 0%, rgba(248, 246, 241, 0.96) 90%);
+}
+
+.state-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 960px;
+}
+
+.state-breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.state-breadcrumbs button {
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+}
+
+.state-breadcrumbs button:hover {
+  color: var(--state-accent);
+}
+
+.bread-sep {
+  color: var(--border-subtle);
+}
+
+.bread-current {
+  color: var(--state-accent);
+  font-weight: 600;
+}
+
+.state-theme-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-sm);
+  background: var(--state-accent-muted);
+  border: 1px solid var(--state-accent);
+  color: var(--state-accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 1.25rem;
+}
+
+.state-hero-title {
+  font-size: 3.5rem;
+  line-height: 1.15;
+  color: var(--text-primary);
+  margin-bottom: 0.6rem;
+}
+
+@media (max-width: 768px) {
+  .state-hero-title {
+    font-size: 2.5rem;
+  }
+}
+
+.state-hero-tagline {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.25rem;
+  font-family: var(--font-serif);
+  font-style: italic;
+}
+
+.state-hero-overview {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  max-width: 800px;
+  margin-bottom: 2.5rem;
+}
+
+/* Quick Facts Strip */
+.state-quick-facts {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  gap: 1.5rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+}
+
+@media (max-width: 850px) {
+  .state-quick-facts {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+}
+
+.fact-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.fact-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.fact-value {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.fact-divider {
+  width: 1px;
+  height: 40px;
+  background: var(--border-card);
+}
+
+@media (max-width: 850px) {
+  .fact-divider {
+    display: none;
+  }
+}
+
+.state-plan-btn {
+  white-space: nowrap;
+  font-weight: 700;
+}
+
+/* State Cities Section */
+.state-cities-section {
+  background: var(--bg-base);
+}
+
+.cities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1.75rem;
+  margin-bottom: 4rem;
+}
+
+@media (max-width: 600px) {
+  .cities-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.city-card {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-card);
+}
+
+.city-card:hover {
+  border-color: var(--state-accent);
+}
+
+.city-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.city-number {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.city-title-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.city-name {
+  font-size: 1.35rem;
+  color: var(--text-primary);
+}
+
+.city-state-ref {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.city-highlight-box {
+  padding: 0.75rem 0.95rem;
+  border-radius: var(--radius-sm);
+  margin-bottom: 1rem;
+}
+
+.highlight-tag {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.2rem;
+}
+
+.highlight-text {
+  font-size: 0.86rem;
+  color: var(--text-primary);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.city-description {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+.city-best-for {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  margin-bottom: 1.25rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border-card);
+}
+
+.best-for-label {
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.best-for-tags {
+  color: var(--text-secondary);
+}
+
+.city-card-actions {
+  margin-top: auto;
+}
+
+.city-inquire-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: var(--bg-elevated);
+  border: 1px solid;
+  color: var(--text-primary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.city-inquire-btn:hover {
+  background: var(--state-accent-muted);
+  color: var(--state-accent);
+}
+
+/* Custom Route CTA */
+.custom-route-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2.5rem;
+  background: var(--bg-surface);
+  border: 1px solid;
+  margin-bottom: 4.5rem;
+}
+
+@media (max-width: 768px) {
+  .custom-route-cta {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.custom-route-text h3 {
+  font-size: 1.45rem;
+  margin-bottom: 0.4rem;
+}
+
+.custom-route-text p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  max-width: 680px;
+}
+
+/* Quick State Switcher */
+.other-states-browser {
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-card);
+}
+
+.switcher-title {
+  font-size: 1.45rem;
+  color: var(--text-primary);
+  margin-bottom: 0.35rem;
+}
+
+.switcher-sub {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.states-pills-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.state-pill-btn {
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.45rem 0.85rem;
+  border-radius: var(--radius-sm);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-card);
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+}
+
+.state-pill-btn:hover {
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+}
+
+.state-pill-btn.active {
+  font-weight: 700;
+}

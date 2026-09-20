@@ -1,0 +1,161 @@
+/* Partners & Quotations Section Styles */
+
+.partners-section {
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border-card);
+}
+
+.partners-showcase-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  margin-bottom: 4.5rem;
+}
+
+@media (max-width: 850px) {
+  .partners-showcase-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.partner-category-title {
+  font-size: 1.25rem;
+  color: var(--text-primary);
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.partner-cards-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 500px) {
+  .partner-cards-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.partner-card {
+  padding: 1.15rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+}
+
+.partner-icon {
+  font-size: 1.25rem;
+  color: var(--accent-gold);
+  background: var(--bg-elevated);
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.partner-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.partner-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.partner-type {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--accent-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.2rem;
+}
+
+.partner-note {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.35;
+}
+
+/* Quotations */
+.traveler-quotations-wrapper {
+  padding-top: 2rem;
+}
+
+.quotations-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.quotations-title {
+  font-size: 2rem;
+  color: var(--text-primary);
+}
+
+.quotations-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+@media (max-width: 900px) {
+  .quotations-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.quote-card {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.quote-mark {
+  font-family: var(--font-serif);
+  font-size: 3.5rem;
+  color: var(--accent-gold);
+  line-height: 1;
+  opacity: 0.4;
+  margin-bottom: -0.5rem;
+}
+
+.quote-text {
+  font-size: 0.96rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  font-style: italic;
+  margin-bottom: 1.75rem;
+  flex-grow: 1;
+}
+
+.quote-author-info {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--border-card);
+  padding-top: 1rem;
+}
+
+.quote-author {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.quote-trip {
+  font-size: 0.8rem;
+  color: var(--accent-gold);
+  font-weight: 500;
+}
+
+.quote-city {
+  font-size: 0.74rem;
+  color: var(--text-muted);
+}

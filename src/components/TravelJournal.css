@@ -1,0 +1,120 @@
+/* Travel Journal Section Styles */
+
+.travel-journal-section {
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border-card);
+}
+
+.journal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+@media (max-width: 900px) {
+  .journal-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.journal-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.journal-card:hover .journal-img {
+  transform: scale(1.05);
+}
+
+.journal-card:hover .journal-read-link {
+  color: var(--accent-gold);
+  transform: translateX(4px);
+}
+
+.journal-image-box {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+  background: #000;
+}
+
+.journal-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.journal-category-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: rgba(11, 15, 21, 0.85);
+  backdrop-filter: blur(8px);
+  color: var(--accent-gold);
+  border: 1px solid var(--accent-gold-border);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-sm);
+  z-index: 2;
+}
+
+.journal-card-body {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.journal-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.meta-sep {
+  color: var(--border-subtle);
+}
+
+.journal-card-title {
+  font-size: 1.35rem;
+  line-height: 1.3;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.journal-card-excerpt {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.journal-card-footer {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-card);
+}
+
+.journal-read-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  transition: all var(--transition-fast);
+}
+
+.journal-arrow {
+  font-size: 1rem;
+}

@@ -1,0 +1,174 @@
+/* Why Choose Us Section Styles */
+
+.why-choose-us-section {
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border-card);
+}
+
+.audience-focus-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 3.5rem;
+}
+
+@media (max-width: 900px) {
+  .audience-focus-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.audience-card {
+  padding: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.featured-audience {
+  border-color: var(--accent-gold-border);
+  box-shadow: var(--shadow-gold);
+}
+
+.audience-badge {
+  position: absolute;
+  top: -12px;
+  left: 2rem;
+  background: var(--accent-gold);
+  color: #0B0F15;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-sm);
+}
+
+.audience-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: var(--radius-sm);
+  background: var(--accent-gold-muted);
+  color: var(--accent-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.audience-title {
+  font-size: 1.45rem;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.audience-desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.audience-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.audience-tags span {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--accent-gold);
+  background: var(--bg-elevated);
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-card);
+}
+
+/* Concrete Metrics Row */
+.metrics-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2.5rem 1.5rem;
+  margin-bottom: 3.5rem;
+}
+
+@media (max-width: 800px) {
+  .metrics-row {
+    flex-direction: column;
+    gap: 1.75rem;
+    text-align: center;
+  }
+}
+
+.metric-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.metric-number {
+  font-family: var(--font-serif);
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: var(--accent-gold);
+  line-height: 1;
+  margin-bottom: 0.4rem;
+}
+
+.metric-label {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.metric-sub {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.metric-divider {
+  width: 1px;
+  height: 60px;
+  background: var(--border-subtle);
+}
+
+@media (max-width: 800px) {
+  .metric-divider {
+    width: 60px;
+    height: 1px;
+  }
+}
+
+/* Why CTA Banner */
+.why-cta-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 2rem 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .why-cta-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.why-cta-text h3 {
+  font-size: 1.35rem;
+  margin-bottom: 0.35rem;
+}
+
+.why-cta-text p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}

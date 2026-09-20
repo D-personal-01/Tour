@@ -1,0 +1,105 @@
+/* B2B Partner Section Styles */
+
+.b2b-section {
+  background: var(--bg-base);
+  border-bottom: 1px solid var(--border-card);
+}
+
+.b2b-wrapper {
+  padding: 3.5rem;
+  border-color: var(--border-subtle);
+  background: linear-gradient(135deg, var(--bg-surface) 0%, var(--bg-elevated) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .b2b-wrapper {
+    padding: 2rem;
+  }
+}
+
+.b2b-content {
+  max-width: 880px;
+}
+
+.b2b-tag {
+  display: inline-block;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--accent-gold);
+  margin-bottom: 0.75rem;
+}
+
+.b2b-headline {
+  font-size: 2.35rem;
+  line-height: 1.25;
+  color: var(--text-primary);
+  margin-bottom: 1.25rem;
+}
+
+@media (max-width: 600px) {
+  .b2b-headline {
+    font-size: 1.85rem;
+  }
+}
+
+.b2b-desc {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+}
+
+.b2b-benefits-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.75rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (max-width: 700px) {
+  .b2b-benefits-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.b2b-benefit {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+}
+
+.benefit-icon {
+  color: var(--accent-gold);
+  font-size: 1rem;
+  margin-top: 0.2rem;
+}
+
+.b2b-benefit h4 {
+  font-size: 1rem;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.b2b-benefit p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+}
+
+.b2b-cta-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.b2b-register-btn {
+  padding: 0.95rem 1.85rem;
+}
+
+.b2b-email-btn {
+  padding: 0.95rem 1.85rem;
+}

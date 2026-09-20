@@ -1,0 +1,169 @@
+/* Popular Destinations Section Styles */
+
+.popular-destinations-section {
+  background: var(--bg-base);
+  border-bottom: 1px solid var(--border-card);
+}
+
+.destination-filters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 3rem;
+}
+
+.filter-btn {
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.5rem 1.15rem;
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-card);
+  background: var(--bg-surface);
+  transition: all var(--transition-fast);
+}
+
+.filter-btn:hover {
+  color: var(--accent-gold);
+  border-color: var(--accent-gold-border);
+}
+
+.filter-btn.active {
+  background: var(--accent-gold-muted);
+  color: var(--accent-gold);
+  border-color: var(--accent-gold);
+}
+
+/* Destinations Grid */
+.destinations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.75rem;
+}
+
+.destination-card {
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.destination-card:hover .dest-image {
+  transform: scale(1.05);
+}
+
+.dest-image-wrapper {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+  background: #000000;
+}
+
+.dest-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dest-image-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(18, 24, 36, 0.95) 0%, rgba(18, 24, 36, 0.2) 60%, transparent 100%);
+}
+
+.dest-badge-container {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 2;
+}
+
+.dest-theme-badge {
+  display: inline-block;
+  padding: 0.25rem 0.65rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  border-radius: var(--radius-sm);
+  border-width: 1px;
+  border-style: solid;
+}
+
+.dest-card-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.dest-region-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  margin-bottom: 0.35rem;
+}
+
+.dest-card-title {
+  font-size: 1.45rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.6rem;
+}
+
+.dest-card-cities {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+.dest-cities-label {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.dest-card-vibe {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-bottom: 1.25rem;
+}
+
+.dest-card-footer {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-card);
+}
+
+.dest-explore-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  transition: transform var(--transition-fast);
+}
+
+.destination-card:hover .dest-explore-link {
+  transform: translateX(4px);
+}
+
+.dest-arrow-symbol {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.view-all-states-cta {
+  text-align: center;
+  margin-top: 3.5rem;
+}
+
+.view-all-btn {
+  padding: 1rem 2.25rem;
+}

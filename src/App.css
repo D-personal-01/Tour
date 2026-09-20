@@ -1,0 +1,12 @@
+/* App Root Layout */
+
+.bespoke-app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.bespoke-home-page {
+  flex-grow: 1;
+}
