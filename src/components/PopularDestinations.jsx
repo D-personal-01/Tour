@@ -69,6 +69,10 @@ export default function PopularDestinations({ navigate }) {
                     alt={`Scenic view of ${state.name}`} 
                     loading="lazy"
                     className="dest-image"
+                    onError={(e) => {
+                      e.target.onerror = null;
+                      e.target.src = 'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?q=80&w=1200&auto=format&fit=crop';
+                    }}
                   />
                   <div className="dest-image-scrim"></div>
                   <div className="dest-badge-container">
