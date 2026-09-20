@@ -1,14 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { getStateById, destinationsData } from '../data/destinationsData';
 import './StatePage.css';
 
 export default function StatePage({ stateId, navigate, onOpenEnquiry }) {
-  const [state, setState] = useState(null);
+  const state = getStateById(stateId) || destinationsData[0];
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-    const foundState = getStateById(stateId) || destinationsData[0];
-    setState(foundState);
   }, [stateId]);
 
   if (!state) return null;

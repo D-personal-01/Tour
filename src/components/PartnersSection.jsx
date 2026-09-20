@@ -4,7 +4,7 @@ import './PartnersSection.css';
 export default function PartnersSection() {
   const airlinePartners = [
     { name: "Air India", type: "Flag Carrier", note: "Priority check-in & business lounge access" },
-    { name: "Vistara", type: "Full Service", note: "Seamless domestic connections" },
+    { name: "Vistara", type: "Full Service", note: "Extensive domestic connections and lounge access" },
     { name: "IndiGo", type: "Extensive Network", note: "Direct regional connectivity" },
     { name: "SpiceJet", type: "Regional Flights", note: "Direct island and mountain routes" }
   ];
@@ -18,7 +18,7 @@ export default function PartnersSection() {
 
   const quotations = [
     {
-      quote: "Our Rajasthan trip with our parents and two young children was handled with exceptional sensitivity. The private palace suites and unhurried daily drives made it effortless for three generations.",
+      quote: "Our Rajasthan trip with our parents and two young children was handled with exceptional sensitivity. The private palace suites and unhurried daily drives made the journey enjoyable for three generations.",
       author: "Dr. Vikram & Sunita Mehra",
       trip: "7-Day Royal Rajasthan Family Journey",
       city: "Bengaluru, India"

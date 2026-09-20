@@ -15,18 +15,18 @@ export default function App() {
   const [route, setRoute] = useState('home');
   const [selectedStateId, setSelectedStateId] = useState('rajasthan');
   const [selectedBlogSlug, setSelectedBlogSlug] = useState('5-hidden-gems-in-coimbatore');
-  const [theme, setTheme] = useState('dark');
+  const [theme, setTheme] = useState(() => {
+    return localStorage.getItem('bespoke_theme') || 'dark';
+  });
 
   const [enquiryModalOpen, setEnquiryModalOpen] = useState(false);
   const [enquiryInitialData, setEnquiryInitialData] = useState({});
   const [b2bModalOpen, setB2BModalOpen] = useState(false);
 
-  // Sync theme with HTML root
+  // Sync theme attribute with HTML root
   useEffect(() => {
-    const savedTheme = localStorage.getItem('bespoke_theme') || 'dark';
-    setTheme(savedTheme);
-    document.documentElement.setAttribute('data-theme', savedTheme);
-  }, []);
+    document.documentElement.setAttribute('data-theme', theme);
+  }, [theme]);
 
   const toggleTheme = () => {
     const newTheme = theme === 'dark' ? 'light' : 'dark';
@@ -161,6 +161,7 @@ export default function App() {
 
       {/* Modals */}
       <EnquiryModal 
+        key={`${enquiryInitialData.packageTitle || ''}-${enquiryInitialData.destination || ''}-${enquiryModalOpen}`}
         isOpen={enquiryModalOpen} 
         onClose={() => setEnquiryModalOpen(false)} 
         initialData={enquiryInitialData}

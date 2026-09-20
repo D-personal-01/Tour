@@ -17,19 +17,6 @@ export default function EnquiryModal({ isOpen, onClose, initialData = {} }) {
 
   const [submitted, setSubmitted] = useState(false);
 
-  useEffect(() => {
-    if (initialData.destination) {
-      setFormData(prev => ({ ...prev, destination: initialData.destination }));
-    }
-    if (initialData.packageTitle) {
-      setFormData(prev => ({ 
-        ...prev, 
-        notes: `Inquiring for package: ${initialData.packageTitle}`,
-        destination: initialData.destination || prev.destination
-      }));
-    }
-  }, [initialData]);
-
   // Keyboard escape handler
   useEffect(() => {
     const handleKeyDown = (e) => {

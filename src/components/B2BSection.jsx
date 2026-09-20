@@ -12,7 +12,7 @@ export default function B2BSection({ onOpenB2B }) {
               Travel Agent & B2B Partnerships
             </h2>
             <p className="b2b-desc">
-              Are you an outbound travel agent, boutique agency, or corporate concierge seeking seamless, luxury domestic handling in India? The Travel Bespoke provides white-label itineraries, contracted palace allocations, and reliable on-ground execution.
+              Are you an outbound travel agent, boutique agency, or corporate concierge seeking dedicated, luxury domestic handling in India? The Travel Bespoke provides white-label itineraries, contracted palace allocations, and reliable on-ground execution.
             </p>
 
             <div className="b2b-benefits-grid">

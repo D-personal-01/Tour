@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './WhatsAppButton.css';
 
-export default function WhatsAppButton({ onOpenEnquiry }) {
+export default function WhatsAppButton() {
   const [chatOpen, setChatOpen] = useState(false);
 
   const startWhatsApp = (message) => {

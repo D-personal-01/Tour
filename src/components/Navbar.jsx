@@ -7,7 +7,7 @@ export default function Navbar({ currentRoute, navigate, theme, toggleTheme, onO
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 40);
+      setScrolled(window.scrollY > 30);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -35,28 +35,31 @@ export default function Navbar({ currentRoute, navigate, theme, toggleTheme, onO
   return (
     <header className={`bespoke-navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="bespoke-container navbar-inner">
-        {/* Brand Logo */}
+        {/* Brand Logo with Circular TB Monogram matching screenshot */}
         <button 
           className="brand-logo" 
           onClick={() => handleNavClick('home')} 
           aria-label="The Travel Bespoke Home"
         >
-          <div className="logo-emblem">
-            <svg viewBox="0 0 40 40" width="28" height="28" fill="none">
-              <circle cx="20" cy="20" r="18" stroke="currentColor" strokeWidth="1.5" strokeDasharray="2 3" />
-              <path d="M12 28 L20 10 L28 28 L20 22 Z" fill="currentColor" />
-            </svg>
+          <div className="logo-monogram-circle">
+            <span>TB</span>
           </div>
           <div className="logo-text">
-            <span className="logo-title">THE TRAVEL BESPOKE</span>
-            <span className="logo-tagline">EST. 2010 • LUXURY CURATIONS</span>
+            <span className="logo-title">The Travel Bespoke</span>
+            <span className="logo-tagline">EXPLORE • DREAM • DISCOVER</span>
           </div>
         </button>
 
-        {/* Desktop Navigation Links */}
+        {/* Desktop Navigation Links matching screenshot */}
         <nav className="desktop-nav" aria-label="Main Navigation">
           <button 
             className={`nav-link ${currentRoute === 'home' ? 'active' : ''}`}
+            onClick={() => handleNavClick('home')}
+          >
+            Home
+          </button>
+          <button 
+            className={`nav-link ${currentRoute === 'state' ? 'active' : ''}`}
             onClick={() => handleNavClick('home', 'popular-destinations')}
           >
             Holidays
@@ -74,10 +77,10 @@ export default function Navbar({ currentRoute, navigate, theme, toggleTheme, onO
             Flights
           </button>
           <button 
-            className={`nav-link ${currentRoute === 'service-taxis' ? 'active' : ''}`}
-            onClick={() => handleNavClick('service-taxis')}
+            className={`nav-link ${currentRoute === 'service-visa' ? 'active' : ''}`}
+            onClick={() => handleNavClick('service-visa')}
           >
-            Taxis
+            Visa
           </button>
           <button 
             className={`nav-link ${currentRoute === 'service-cruises' ? 'active' : ''}`}
@@ -86,19 +89,13 @@ export default function Navbar({ currentRoute, navigate, theme, toggleTheme, onO
             Cruises
           </button>
           <button 
-            className={`nav-link ${currentRoute === 'insurance' ? 'active' : ''}`}
-            onClick={() => handleNavClick('insurance')}
-          >
-            Insurance
-          </button>
-          <button 
             className="nav-link"
             onClick={() => handleNavClick('home', 'why-bespoke')}
           >
             About
           </button>
           <button 
-            className={`nav-link ${currentRoute === 'blog' ? 'active' : ''}`}
+            className={`nav-link ${currentRoute === 'blog-detail' ? 'active' : ''}`}
             onClick={() => handleNavClick('home', 'travel-journal')}
           >
             Blog
@@ -109,15 +106,9 @@ export default function Navbar({ currentRoute, navigate, theme, toggleTheme, onO
           >
             Contact
           </button>
-          <button 
-            className="nav-link b2b-nav"
-            onClick={() => handleNavClick('home', 'b2b-section')}
-          >
-            B2B
-          </button>
         </nav>
 
-        {/* Actions: Theme Toggle & Enquire Now */}
+        {/* Actions: Theme Toggle & Gold Pill Enquire Now Button */}
         <div className="navbar-actions">
           <button 
             className="theme-toggle-btn" 
@@ -126,7 +117,7 @@ export default function Navbar({ currentRoute, navigate, theme, toggleTheme, onO
             title={`Switch to ${theme === 'dark' ? 'Day' : 'Night'} Mode`}
           >
             {theme === 'dark' ? (
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <circle cx="12" cy="12" r="5"></circle>
                 <line x1="12" y1="1" x2="12" y2="3"></line>
                 <line x1="12" y1="21" x2="12" y2="23"></line>
@@ -138,14 +129,14 @@ export default function Navbar({ currentRoute, navigate, theme, toggleTheme, onO
                 <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
               </svg>
             ) : (
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
               </svg>
             )}
           </button>
 
           <button 
-            className="btn-primary enquire-now-btn" 
+            className="enquire-now-pill" 
             onClick={() => onOpenEnquiry()}
           >
             Enquire Now
@@ -168,19 +159,19 @@ export default function Navbar({ currentRoute, navigate, theme, toggleTheme, onO
       {/* Mobile Off-Canvas Navigation Drawer */}
       <div className={`mobile-nav-drawer ${mobileMenuOpen ? 'open' : ''}`}>
         <div className="mobile-nav-links">
+          <button onClick={() => handleNavClick('home')}>Home</button>
           <button onClick={() => handleNavClick('home', 'popular-destinations')}>Holidays</button>
-          <button onClick={() => handleNavClick('service-hotels')}>Hotels & Palaces</button>
-          <button onClick={() => handleNavClick('service-flights')}>Flight Concierge</button>
-          <button onClick={() => handleNavClick('service-taxis')}>Chauffeured Taxis</button>
-          <button onClick={() => handleNavClick('service-cruises')}>Luxury Cruises</button>
+          <button onClick={() => handleNavClick('service-hotels')}>Hotels</button>
+          <button onClick={() => handleNavClick('service-flights')}>Flights</button>
+          <button onClick={() => handleNavClick('service-visa')}>Visa Concierge</button>
+          <button onClick={() => handleNavClick('service-cruises')}>Cruises</button>
           <button onClick={() => handleNavClick('insurance')}>Travel Insurance</button>
-          <button onClick={() => handleNavClick('home', 'why-bespoke')}>About Bespoke</button>
-          <button onClick={() => handleNavClick('home', 'travel-journal')}>Travel Blog</button>
-          <button onClick={() => handleNavClick('home', 'b2b-section')}>B2B Partners</button>
-          <button onClick={() => handleNavClick('home', 'contact-section')}>Contact Concierge</button>
+          <button onClick={() => handleNavClick('home', 'why-bespoke')}>About</button>
+          <button onClick={() => handleNavClick('home', 'travel-journal')}>Blog</button>
+          <button onClick={() => handleNavClick('home', 'contact-section')}>Contact</button>
           <div className="mobile-drawer-cta">
             <button 
-              className="btn-primary" 
+              className="enquire-now-pill w-full" 
               onClick={() => { setMobileMenuOpen(false); onOpenEnquiry(); }}
             >
               Enquire Now
