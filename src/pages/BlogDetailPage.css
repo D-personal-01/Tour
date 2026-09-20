@@ -1,12 +1,12 @@
 /* Blog Detail Page Styles */
 
 .blog-detail-page {
-  padding-top: 5rem;
+  padding-top: 0;
   background: var(--bg-base);
 }
 
 .article-hero-section {
-  padding: 5rem 0 2.5rem 0;
+  padding: 8.5rem 0 2.5rem 0;
   text-align: center;
 }
 
