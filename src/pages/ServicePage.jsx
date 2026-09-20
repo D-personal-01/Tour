@@ -118,6 +118,34 @@ export default function ServicePage({ serviceType, navigate, onOpenEnquiry }) {
           locations: "Sundarbans Delta, West Bengal"
         }
       ]
+    },
+    visa: {
+      tag: "PRIVATE VISA & EXPEDITED DOCUMENTATION",
+      title: "Private Visa Concierge & Embassy Expeditions",
+      desc: "Navigating diplomatic documentation with speed, accuracy, and total discretion. Our private concierge coordinates diplomatic appointments, biometric facilitation, doorstep document retrieval, and expedited processing for international travelers and Indian citizens.",
+      image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=1600&auto=format&fit=crop",
+      cards: [
+        {
+          title: "Doorstep Document Collection",
+          desc: "Our bonded security messengers collect, verify, and notarize your passport and supporting affidavits directly at your home or office.",
+          locations: "Delhi NCR, Mumbai, Bengaluru, Chennai, Hyderabad, Kolkata"
+        },
+        {
+          title: "Diplomatic & VIP Fast-Track",
+          desc: "Assistance with urgent consular appointments, lounge access at visa centers, and fast-track biometric enrollment.",
+          locations: "Schengen, UK, USA, Japan, UAE, Singapore, Australia"
+        },
+        {
+          title: "Inbound India Tourist e-Visa",
+          desc: "Complete pre-clearance and express e-Visa assistance for international visitors, NRI delegations, and destination wedding guests.",
+          locations: "Pan-India 28 International Airports"
+        },
+        {
+          title: "Emergency Travel Clearances",
+          desc: "Round-the-clock liaison with regional passport offices and consular desks for urgent business or medical transit.",
+          locations: "Dedicated 24/7 Diplomatic Helpdesk"
+        }
+      ]
     }
   };
 
@@ -144,10 +172,10 @@ export default function ServicePage({ serviceType, navigate, onOpenEnquiry }) {
           <p className="service-desc">{current.desc}</p>
 
           <button 
-            className="btn-primary"
+            className="btn-pill-gold"
             onClick={() => onOpenEnquiry({ packageTitle: current.title })}
           >
-            Inquire for {current.title.split('&')[0]}
+            Inquire for {current.title.split('&')[0]} →
           </button>
         </div>
       </section>

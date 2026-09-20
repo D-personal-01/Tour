@@ -1,13 +1,30 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { getStateById, destinationsData } from '../data/destinationsData';
 import './StatePage.css';
 
 export default function StatePage({ stateId, navigate, onOpenEnquiry }) {
+  const [activeBottomTab, setActiveBottomTab] = useState('holidays');
   const state = getStateById(stateId) || destinationsData[0];
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [stateId]);
+
+  const handleBottomTabClick = (tabKey) => {
+    setActiveBottomTab(tabKey);
+    if (tabKey === 'holidays') {
+      const el = document.getElementById('state-cities-section');
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    } else if (tabKey === 'hotels') {
+      navigate('service-hotels');
+    } else if (tabKey === 'flights') {
+      navigate('service-flights');
+    } else if (tabKey === 'visa') {
+      navigate('service-visa');
+    } else if (tabKey === 'cruises') {
+      navigate('service-cruises');
+    }
+  };
 
   if (!state) return null;
 
@@ -21,150 +38,225 @@ export default function StatePage({ stateId, navigate, onOpenEnquiry }) {
         '--state-gradient': state.theme.gradient
       }}
     >
-      {/* State Hero Banner */}
+      {/* Exact Replica of Reference Screenshot Hero Section */}
       <section 
-        className="state-hero-section"
+        className="state-hero-showcase"
         style={{
           backgroundImage: `url(${state.bannerImage})`
         }}
       >
-        <div className="state-hero-overlay"></div>
-        <div className="bespoke-container state-hero-content">
-          {/* Breadcrumbs */}
-          <nav className="state-breadcrumbs" aria-label="Breadcrumb">
-            <button onClick={() => navigate('home')}>Home</button>
-            <span className="bread-sep">/</span>
-            <button onClick={() => navigate('home', 'popular-destinations')}>Domestic Destinations</button>
-            <span className="bread-sep">/</span>
-            <span className="bread-current">{state.name}</span>
-          </nav>
+        <div className="state-hero-scrim"></div>
 
-          <div className="state-theme-pill">
-            <span className="state-region-tag">{state.region}</span>
-            <span className="pill-divider">•</span>
-            <span>{state.cities.length} Curated Cities & Havens</span>
+        <div className="bespoke-container state-hero-container">
+          <div className="state-hero-text-block">
+            {/* Pill Eyebrow Badge */}
+            <div className="state-eyebrow-pill">
+              <span>WELCOME TO THE TRAVEL BESPOKE</span>
+            </div>
+
+            {/* Editorial Serif Headline matching screenshot */}
+            <h1 className="state-main-headline">
+              Where Every Journey<br />
+              Begins<br />
+              <span className="gold-script-phrase">With You.</span>
+            </h1>
+
+            {/* Subtitle */}
+            <p className="state-main-subtext">
+              Handcrafted itineraries tailored to your desires, from the palaces of {state.name} to secluded mountain passes and coastal sanctuaries beyond.
+            </p>
+
+            {/* Two Action Buttons matching screenshot */}
+            <div className="state-hero-actions">
+              <button 
+                className="btn-pill-gold plan-journey-btn"
+                onClick={() => onOpenEnquiry({ destination: state.name })}
+              >
+                <span>Plan My Journey</span>
+                <span className="btn-arrow-icon" aria-hidden="true">→</span>
+              </button>
+
+              <button 
+                className="btn-pill-glass explore-packages-btn"
+                onClick={() => {
+                  const el = document.getElementById('state-cities-section');
+                  if (el) el.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
+                Explore Destinations
+              </button>
+            </div>
+
+            {/* Slider Pagination Indicator matching screenshot: gold bar + two dots */}
+            <div className="hero-slider-indicator" aria-hidden="true">
+              <span className="slider-bar-active"></span>
+              <span className="slider-dot"></span>
+              <span className="slider-dot"></span>
+            </div>
           </div>
 
-          <h1 className="state-hero-title">{state.name}</h1>
-          <p className="state-hero-tagline">{state.tagline}</p>
-          <div className="gold-divider" style={{ background: state.theme.accent }}></div>
+          {/* Right-hand Vertical SCROLL Indicator matching screenshot */}
+          <div className="hero-scroll-indicator" aria-hidden="true">
+            <span className="scroll-text">SCROLL</span>
+            <div className="scroll-vertical-line"></div>
+          </div>
 
-          <p className="state-hero-overview">{state.overview}</p>
+          {/* Floating Bottom Frosted Service Pills matching screenshot */}
+          <div className="hero-floating-pills" role="tablist">
+            <button 
+              className={`floating-pill ${activeBottomTab === 'holidays' ? 'active' : ''}`}
+              onClick={() => handleBottomTabClick('holidays')}
+              role="tab"
+            >
+              Holidays
+            </button>
+            <button 
+              className={`floating-pill ${activeBottomTab === 'hotels' ? 'active' : ''}`}
+              onClick={() => handleBottomTabClick('hotels')}
+              role="tab"
+            >
+              Hotels
+            </button>
+            <button 
+              className={`floating-pill ${activeBottomTab === 'flights' ? 'active' : ''}`}
+              onClick={() => handleBottomTabClick('flights')}
+              role="tab"
+            >
+              Flights
+            </button>
+            <button 
+              className={`floating-pill ${activeBottomTab === 'visa' ? 'active' : ''}`}
+              onClick={() => handleBottomTabClick('visa')}
+              role="tab"
+            >
+              Visa
+            </button>
+            <button 
+              className={`floating-pill ${activeBottomTab === 'cruises' ? 'active' : ''}`}
+              onClick={() => handleBottomTabClick('cruises')}
+              role="tab"
+            >
+              Cruises
+            </button>
+          </div>
+        </div>
+      </section>
 
-          {/* Quick Facts Strip */}
-          <div className="state-quick-facts bespoke-card">
+      {/* State Overview & Quick Facts Bar */}
+      <section className="state-summary-bar">
+        <div className="bespoke-container">
+          <div className="state-facts-strip bespoke-card">
             <div className="fact-item">
-              <span className="fact-label">BEST SEASON TO VISIT</span>
+              <span className="fact-label">STATE / REGION</span>
+              <span className="fact-value">{state.name} ({state.region})</span>
+            </div>
+            <div className="fact-divider"></div>
+            <div className="fact-item">
+              <span className="fact-label">BEST SEASON</span>
               <span className="fact-value">{state.bestSeason}</span>
             </div>
             <div className="fact-divider"></div>
             <div className="fact-item">
-              <span className="fact-label">RECOMMENDED DURATION</span>
+              <span className="fact-label">IDEAL DURATION</span>
               <span className="fact-value">{state.idealDuration}</span>
             </div>
             <div className="fact-divider"></div>
             <div className="fact-item">
-              <span className="fact-label">SIGNATURE VIBE</span>
-              <span className="fact-value">{state.vibe}</span>
-            </div>
-            <div className="fact-action">
-              <button 
-                className="btn-primary state-plan-btn"
-                onClick={() => onOpenEnquiry({ destination: state.name })}
-                style={{ background: state.theme.accent, color: '#0B0F15' }}
-              >
-                Plan {state.name} Itinerary
-              </button>
+              <span className="fact-label">DESTINATIONS</span>
+              <span className="fact-value" style={{ color: state.theme.accent }}>
+                {state.cities.length} Curated Havens
+              </span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Cities and Destinations Directory as specified in image.png */}
-      <section className="section-padding state-cities-section">
+      {/* Open, Spacious Cities & Havens Directory from pamphlet (image.png) */}
+      <section id="state-cities-section" className="section-padding state-cities-showcase">
         <div className="bespoke-container">
           <div className="section-header">
             <span className="section-label" style={{ color: state.theme.accent }}>
-              VERIFIED DESTINATION CATALOG
+              OFFICIAL DOMESTIC PAMPHLET DIRECTORY
             </span>
             <h2 className="section-title">
-              Cities, Harbors & Valleys in {state.name}
+              Destinations & Cities in {state.name}
             </h2>
             <div className="gold-divider" style={{ background: state.theme.accent }}></div>
             <p className="section-desc">
-              Every destination listed below is part of our official domestic itinerary network. Select any location to incorporate it into your private custom route.
+              Every city below is curated directly from our official domestic itinerary network. Select any destination to customize your private chauffeur route, villa reservations, and local experiences.
             </p>
           </div>
 
-          {/* Cities Grid */}
-          <div className="cities-grid">
+          {/* Spacious Cities Grid */}
+          <div className="spacious-cities-grid">
             {state.cities.map((city, idx) => (
-              <div key={idx} className="city-card bespoke-card">
-                <div className="city-card-header">
-                  <div className="city-number" style={{ color: state.theme.accent }}>
+              <div key={idx} className="spacious-city-card bespoke-card">
+                <div className="city-card-top">
+                  <div className="city-num-badge" style={{ color: state.theme.accent, borderColor: state.theme.badgeBorder }}>
                     {String(idx + 1).padStart(2, '0')}
                   </div>
-                  <div className="city-title-group">
-                    <h3 className="city-name">{city.name}</h3>
-                    <span className="city-state-ref">{state.name}</span>
+                  <div className="city-title-meta">
+                    <h3 className="city-title">{city.name}</h3>
+                    <span className="city-state-label">{state.name}</span>
                   </div>
                 </div>
 
-                <div className="city-highlight-box" style={{ background: state.theme.accentMuted }}>
-                  <span className="highlight-tag" style={{ color: state.theme.accent }}>SIGNATURE HIGHLIGHT</span>
-                  <p className="highlight-text">{city.highlight}</p>
+                <div className="city-highlight-banner" style={{ background: state.theme.accentMuted }}>
+                  <span className="highlight-kicker" style={{ color: state.theme.accent }}>SIGNATURE HIGHLIGHT</span>
+                  <p className="highlight-quote">{city.highlight}</p>
                 </div>
 
-                <p className="city-description">{city.description}</p>
+                <p className="city-narrative">{city.description}</p>
 
-                <div className="city-best-for">
-                  <span className="best-for-label">Best For:</span>
-                  <span className="best-for-tags">{city.bestFor}</span>
+                <div className="city-meta-tags">
+                  <span className="meta-tag-label">Ideal For:</span>
+                  <span className="meta-tag-value">{city.bestFor}</span>
                 </div>
 
-                <div className="city-card-actions">
+                <div className="city-footer-action">
                   <button 
-                    className="city-inquire-btn"
+                    className="city-plan-btn"
                     onClick={() => onOpenEnquiry({ destination: `${city.name}, ${state.name}` })}
                     style={{ borderColor: state.theme.badgeBorder }}
                   >
-                    Inquire for {city.name}
-                    <span className="city-btn-arrow" aria-hidden="true">→</span>
+                    <span>Inquire for {city.name}</span>
+                    <span className="city-arrow" aria-hidden="true">→</span>
                   </button>
                 </div>
               </div>
             ))}
           </div>
 
-          {/* Direct CTA for Custom Route */}
-          <div className="custom-route-cta bespoke-card" style={{ borderColor: state.theme.badgeBorder }}>
-            <div className="custom-route-text">
-              <h3>Looking to combine multiple cities in {state.name}?</h3>
+          {/* Spacious Multi-City Combination Banner */}
+          <div className="multi-city-banner bespoke-card">
+            <div className="multi-city-text">
+              <span className="pill-badge">CUSTOM PRIVATE ROUTE</span>
+              <h3>Combine Multiple Cities Across {state.name}</h3>
               <p>
-                Our private route specialists configure chauffeured transfers, luggage transit, and private guides across any combination of {state.cities.map(c => c.name).slice(0, 3).join(', ')} and beyond.
+                Prefer a multi-destination route? Our senior logistics curators arrange dedicated luxury vehicles, vetted route chauffeurs, and private guides across any combination of {state.cities.map(c => c.name).slice(0, 4).join(', ')} and beyond.
               </p>
             </div>
             <button 
-              className="btn-primary" 
+              className="btn-pill-gold"
               onClick={() => onOpenEnquiry({ destination: state.name })}
-              style={{ background: state.theme.accent, color: '#0B0F15' }}
+              style={{ background: state.theme.accent, color: '#070B12' }}
             >
-              Craft Multi-City Itinerary
+              Curate Multi-City Journey →
             </button>
           </div>
 
-          {/* Quick State Switcher */}
-          <div className="other-states-browser">
-            <h3 className="switcher-title">Explore Other Domestic States & Union Territories</h3>
-            <p className="switcher-sub">Tap any state below to view its dedicated cities and regional theme:</p>
+          {/* Quick Switcher across all 34 Domestic States & UTs */}
+          <div className="state-switcher-tray">
+            <h3 className="switcher-heading">Explore Other Domestic States & Union Territories</h3>
+            <p className="switcher-subheading">Tap any destination to view its curated cities and dedicated theme:</p>
             
-            <div className="states-pills-cloud">
+            <div className="state-switcher-pills">
               {destinationsData.map((s) => (
                 <button
                   key={s.id}
-                  className={`state-pill-btn ${s.id === state.id ? 'active' : ''}`}
+                  className={`state-jump-pill ${s.id === state.id ? 'active' : ''}`}
                   onClick={() => navigate('state', s.id)}
-                  style={s.id === state.id ? { background: s.theme.accent, color: '#0B0F15' } : {}}
+                  style={s.id === state.id ? { background: s.theme.accent, color: '#070B12', borderColor: s.theme.accent } : {}}
                 >
                   {s.name} ({s.cities.length})
                 </button>

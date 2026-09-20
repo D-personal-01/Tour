@@ -312,7 +312,7 @@ export const destinationsData = [
     cities: [
       { name: "Shimla", highlight: "The Mall Road, Viceregal Lodge, and heritage toy train", description: "Former British summer capital with grand colonial architecture and pine-scented promenades.", bestFor: "Colonial History, Scenic Walks, Heritage Hotels" },
       { name: "Manali", highlight: "Solang Valley, Old Manali apple orchards, and Rohtang Pass", description: "High-altitude resort town framed by snow-clad peaks, mountain streams, and luxury chalets.", bestFor: "Snow Adventures, Mountain Chalets, Rivers" },
-      { name: "Kasol", highlight: "Parvati River pine trails and alpine cafes", description: "A peaceful riverside mountain haven nestled inside the majestic Parvati Valley.", bestFor: "Nature Treks, Riverside Walks" },
+      { name: "Kasol", highlight: "Parvati River pine trails and alpine cafes", description: "A peaceful riverside mountain haven set inside the majestic Parvati Valley.", bestFor: "Nature Treks, Riverside Walks" },
       { name: "Kullu", highlight: "Great Himalayan National Park and handloom shawls", description: "The valley of the gods, celebrated for traditional wool weavers and river rafting.", bestFor: "Handloom Shopping, River Rafting" },
       { name: "Dharamshala", highlight: "Kangra Valley tea gardens and HPCA Stadium", description: "Lush valley surrounded by cedar forests and views of the snow-clad Dhauladhar range.", bestFor: "Tea Estates, Cricket Heritage, Scenic Serenity" },
       { name: "McLeod Ganj", highlight: "Tsuglagkhang Complex and Bhagsu waterfalls", description: "Seat of His Holiness the Dalai Lama, rich with Tibetan philosophy, monk libraries, and cafes.", bestFor: "Tibetan Culture, Meditation, Mountain Walks" },
@@ -474,7 +474,7 @@ export const destinationsData = [
     bestSeason: "October to May",
     idealDuration: "4 to 6 Days",
     vibe: "Secluded Coral Atolls & Turquoise Lagoons",
-    overview: "Thirty-six coral islands nestled in the Arabian Sea with crystal waters, vibrant sea turtles, and untouched sands.",
+    overview: "Thirty-six coral islands scattered across the Arabian Sea with crystal waters, vibrant sea turtles, and untouched sands.",
     cities: [
       { name: "Agatti", highlight: "Runway over the turquoise ocean and coral reef kayaking", description: "The island gateway boasting one of the world's most spectacular airstrips bordered by azure water on both flanks.", bestFor: "Lagoon Flights, Reef Kayaking, Scuba Diving" },
       { name: "Bangaram", highlight: "Teardrop-shaped uninhabited island and bioluminescent night waters", description: "An exclusive, tranquil paradise where shallow coral reefs surround white sandspits.", bestFor: "Private Island Living, Snorkeling, Solitude" },
@@ -532,7 +532,7 @@ export const destinationsData = [
       { name: "Lonavala", highlight: "Karla and Bhaja ancient Buddhist caves and misty valley viewpoints", description: "Charming Sahyadri getaway renowned for waterfalls, chikki sweets, and cliffside walks.", bestFor: "Monsoon Retreats, Ancient Buddhist Caves" },
       { name: "Mahabaleshwar", highlight: "Venna Lake, strawberry farms, and Arthur's Seat cliff overlook", description: "Plateau hill station celebrated for fresh strawberry harvests and dramatic forest gorges.", bestFor: "Strawberry Estates, Mountain Lookouts" },
       { name: "Alibaug", highlight: "Kolaba Sea Fort and secluded beachfront private villas", description: "A quick speedboat crossing from Mumbai, famed for serene coastal hamlets and private estate living.", bestFor: "Secluded Luxury Villas, Sea Forts" },
-      { name: "Nashik", highlight: "Sula Vineyards and Trimbakeshwar Jyotirlinga", description: "The wine capital of India nestled along the sacred Godavari River with vineyard stays.", bestFor: "Wine Tastings, Vineyard Lodges, River Ghats" },
+      { name: "Nashik", highlight: "Sula Vineyards and Trimbakeshwar Jyotirlinga", description: "The wine capital of India situated along the sacred Godavari River with vineyard stays.", bestFor: "Wine Tastings, Vineyard Lodges, River Ghats" },
       { name: "Aurangabad (Chhatrapati Sambhajinagar)", highlight: "Ajanta & Ellora Caves and Bibi Ka Maqbara", description: "World heritage gateway to monumental rock-cut cave temples carved directly into basalt mountains.", bestFor: "Rock-Cut Caves, UNESCO Architecture" }
     ]
   },
@@ -725,8 +725,8 @@ export const destinationsData = [
     cities: [
       { name: "Gangtok", highlight: "Rumtek Monastery, MG Marg promenade, and Tsomgo Lake", description: "The cosmopolitan hill capital offering sweeping views of snowy peaks and quiet Buddhist monasteries.", bestFor: "Mountain Views, Monasteries, Clean Promenades" },
       { name: "Pelling", highlight: "Pemayangtse Monastery and skywalk overlooking Kangchenjunga", description: "Quiet forest town offering closest unobstructed views of the sacred third-highest mountain on Earth.", bestFor: "Mountain Panoramas, Skywalks, Ruins" },
-      { name: "Lachung", highlight: "Yumthang Valley of Flowers and Zero Point snow passes", description: "A picturesque riverside village nestled in North Sikkim near thermal hot springs and blooming rhododendrons.", bestFor: "Alpine Flower Valleys, Snow Glaciers" },
-      { name: "Ravangla", highlight: "Buddha Park with colossal bronze statue and tea gardens", description: "A peaceful sanctuary nestled beneath Maenam Hill, featuring Temi Tea Estate and meditation walks.", bestFor: "Meditation Parks, Organic Tea Gardens" }
+      { name: "Lachung", highlight: "Yumthang Valley of Flowers and Zero Point snow passes", description: "A picturesque riverside village located in North Sikkim near thermal hot springs and blooming rhododendrons.", bestFor: "Alpine Flower Valleys, Snow Glaciers" },
+      { name: "Ravangla", highlight: "Buddha Park with colossal bronze statue and tea gardens", description: "A peaceful sanctuary sheltered beneath Maenam Hill, featuring Temi Tea Estate and meditation walks.", bestFor: "Meditation Parks, Organic Tea Gardens" }
     ]
   },
   {
@@ -797,7 +797,7 @@ export const destinationsData = [
     bestSeason: "October to March",
     idealDuration: "3 to 4 Days",
     vibe: "Water Palaces & Mythological Rock Carvings",
-    overview: "White floating palaces on tranquil lakes and mystical rock-cut Shiva carvings nestled in deep forest valleys.",
+    overview: "White floating palaces on tranquil lakes and mystical rock-cut Shiva carvings framed by deep forest valleys.",
     cities: [
       { name: "Agartala", highlight: "Ujjayanta Palace and Neermahal Lake Palace", description: "Royal palace capital surrounded by red-brick courtyards and intricate bamboo weaving crafts.", bestFor: "Palace Architecture, Lake Sanctuaries" }
     ]
@@ -847,7 +847,7 @@ export const destinationsData = [
     vibe: "Himalayan Wilderness, Yoga Retreats & Sacred Shrines",
     overview: "Devbhoomi, the Land of the Gods. Pristine alpine meadows, luxury riverside wellness retreats in Rishikesh, and Himalayan trails.",
     cities: [
-      { name: "Dehradun", highlight: "Robber's Cave, Forest Research Institute, and bakeries", description: "Picturesque valley capital nestled between the Ganga and Yamuna rivers, known for pleasant climate.", bestFor: "Forest Architecture, Valley Strolls" },
+      { name: "Dehradun", highlight: "Robber's Cave, Forest Research Institute, and bakeries", description: "Picturesque valley capital positioned between the Ganga and Yamuna rivers, known for pleasant climate.", bestFor: "Forest Architecture, Valley Strolls" },
       { name: "Mussoorie", highlight: "Kempty Falls, Gun Hill, and Camel's Back Road", description: "The Queen of the Hills offering dramatic views of the Doon Valley and snow-clad Himalayan peaks.", bestFor: "Colonial Promenades, Mountain Air, Waterfalls" },
       { name: "Nainital", highlight: "Naini Lake boating, Naina Devi Temple, and snow views", description: "A tranquil emerald lake town enclosed by seven steep hills in the Kumaon region.", bestFor: "Lakeside Boating, Pine Walking Trails" },
       { name: "Rishikesh", highlight: "Luxury Ayurvedic ashrams, Ganga evening Aarti, and river rafting", description: "The Yoga Capital of the World, where the holy river emerges from high mountains into clear gravel beds.", bestFor: "Wellness Sanctuaries, Yoga Retreats, River Rafting" },
@@ -855,7 +855,7 @@ export const destinationsData = [
       { name: "Jim Corbett", highlight: "India's oldest national park and Dhikala zone tiger safaris", description: "A legendary wildlife haven along the Ramganga River, sheltering Royal Bengal tigers and wild elephants.", bestFor: "Wild Bengal Tiger Safaris, Riverside Lodges" },
       { name: "Auli", highlight: "Auli ropeway, artificial lake, and snow skiing slopes", description: "Premier Himalayan ski resort offering panoramic 180-degree vistas of Nanda Devi and Trishul peaks.", bestFor: "Skiing, Alpine Meadows, Snow Vistas" },
       { name: "Kedarnath", highlight: "Ancient stone Jyotirlinga shrine set against snow peaks", description: "Revered high-altitude Himalayan pilgrimage destination standing proudly at 11,755 feet.", bestFor: "Sacred High-Altitude Treks, Mountain Solitude" },
-      { name: "Badrinath", highlight: "Badrinath Temple, Tapt Kund, and Mana the last Indian village", description: "Sacred Vishnu shrine nestled between the Nar and Narayana mountain ranges beside the Alaknanda.", bestFor: "Char Dham Pilgrimage, High Valley Exploration" }
+      { name: "Badrinath", highlight: "Badrinath Temple, Tapt Kund, and Mana the last Indian village", description: "Sacred Vishnu shrine standing between the Nar and Narayana mountain ranges beside the Alaknanda.", bestFor: "Char Dham Pilgrimage, High Valley Exploration" }
     ]
   },
   {
