@@ -238,7 +238,7 @@ export default function StatePage({ stateId, navigate, onOpenEnquiry }) {
             <button 
               className="btn-pill-gold"
               onClick={() => onOpenEnquiry({ destination: state.name })}
-              style={{ background: state.theme.accent, color: '#070B12' }}
+              style={{ background: state.theme.accent, color: '#FFFFFF' }}
             >
               Curate Multi-City Journey →
             </button>
@@ -255,7 +255,7 @@ export default function StatePage({ stateId, navigate, onOpenEnquiry }) {
                   key={s.id}
                   className={`state-jump-pill ${s.id === state.id ? 'active' : ''}`}
                   onClick={() => navigate('state', s.id)}
-                  style={s.id === state.id ? { background: s.theme.accent, color: '#070B12', borderColor: s.theme.accent } : {}}
+                  style={s.id === state.id ? { background: s.theme.accent, color: '#FFFFFF', borderColor: s.theme.accent } : {}}
                 >
                   {s.name} ({s.cities.length})
                 </button>

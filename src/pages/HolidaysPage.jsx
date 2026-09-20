@@ -106,7 +106,16 @@ export default function HolidaysPage({ navigate, onOpenEnquiry }) {
                 }}
               >
                 <div className="state-card-media">
-                  <img src={state.bannerImage} alt={state.name} loading="lazy" className="state-card-img" />
+                  <img 
+                    src={state.bannerImage} 
+                    alt={state.name} 
+                    loading="lazy" 
+                    className="state-card-img" 
+                    onError={(e) => {
+                      e.target.onerror = null;
+                      e.target.src = 'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?q=80&w=1200&auto=format&fit=crop';
+                    }}
+                  />
                   <div className="state-card-scrim"></div>
                   <div className="state-region-badge">{state.region}</div>
                   <div className="state-duration-badge">{state.idealDuration}</div>
@@ -182,7 +191,16 @@ export default function HolidaysPage({ navigate, onOpenEnquiry }) {
             {filteredPackages.map(pkg => (
               <div key={pkg.id} className="holiday-pkg-card bespoke-card">
                 <div className="pkg-media-box">
-                  <img src={pkg.image} alt={pkg.title} loading="lazy" className="pkg-photo" />
+                  <img 
+                    src={pkg.image} 
+                    alt={pkg.title} 
+                    loading="lazy" 
+                    className="pkg-photo" 
+                    onError={(e) => {
+                      e.target.onerror = null;
+                      e.target.src = 'https://images.unsplash.com/photo-1599661046289-e31897846e41?q=80&w=1200&auto=format&fit=crop';
+                    }}
+                  />
                   <div className="pkg-photo-scrim"></div>
                   <span className="pkg-badge-duration">{pkg.duration}</span>
                   <span className="pkg-badge-cat">{pkg.category}</span>

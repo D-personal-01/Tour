@@ -16,22 +16,26 @@ export default function ServicePage({ serviceType, navigate, onOpenEnquiry }) {
         {
           title: "Royal Heritage Palaces",
           desc: "Live like royal nobility in Udaipur, Jaipur, Jodhpur, and Mysuru. Marble courtyards, hand-carved jharokhas, and private butler service.",
-          locations: "Udaipur, Jaipur, Jodhpur, Gwalior"
+          locations: "Udaipur, Jaipur, Jodhpur, Gwalior",
+          image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=800&auto=format&fit=crop"
         },
         {
           title: "Planter Estate Bungalows",
           desc: "Century-old British colonial bungalows surrounded by cloud-hung tea gardens in Munnar, Darjeeling, and Coonoor.",
-          locations: "Munnar, Darjeeling, Ooty, Coorg"
+          locations: "Munnar, Darjeeling, Ooty, Coorg",
+          image: "https://images.unsplash.com/photo-1587061949409-02df41d5e562?q=80&w=800&auto=format&fit=crop"
         },
         {
           title: "Jungle & Tiger Safari Lodges",
           desc: "Luxury tented pavilions with air conditioning and private plunge pools bordering Kanha, Bandhavgarh, and Ranthambore reserves.",
-          locations: "Kanha, Bandhavgarh, Corbett, Gir"
+          locations: "Kanha, Bandhavgarh, Corbett, Gir",
+          image: "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?q=80&w=800&auto=format&fit=crop"
         },
         {
           title: "Secluded Coastal Villas",
           desc: "Private oceanfront properties with direct barefoot beach access, private chefs, and sunset cocktail decks in South Goa and Andaman.",
-          locations: "South Goa, Havelock, Alibaug, Varkala"
+          locations: "South Goa, Havelock, Alibaug, Varkala",
+          image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=800&auto=format&fit=crop"
         }
       ]
     },
@@ -44,22 +48,26 @@ export default function ServicePage({ serviceType, navigate, onOpenEnquiry }) {
         {
           title: "Himalayan Helicopter Shuttles",
           desc: "Direct chopper transfers to Kedarnath, Badrinath, Gulmarg, and high-altitude Himalayan ski resorts without arduous road climbs.",
-          locations: "Dehradun to Char Dham, Srinagar to Gulmarg"
+          locations: "Dehradun to Char Dham, Srinagar to Gulmarg",
+          image: "https://images.unsplash.com/photo-1508614589041-895b88991e3e?q=80&w=800&auto=format&fit=crop"
         },
         {
           title: "Private Jet & Turboprop Charters",
           desc: "Executive charter flights between non-scheduled airports, wildlife airstrips, and island destinations with zero airport queues.",
-          locations: "Pan-India Custom Air Routes"
+          locations: "Pan-India Custom Air Routes",
+          image: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?q=80&w=800&auto=format&fit=crop"
         },
         {
           title: "Commercial Aviation Concierge",
           desc: "Business class booking with Air India, Vistara, and IndiGo with airport lounge passes, meet-and-greet, and priority luggage tags.",
-          locations: "All Major Domestic Air Hubs"
+          locations: "All Major Domestic Air Hubs",
+          image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=800&auto=format&fit=crop"
         },
         {
           title: "Inter-Island Air Transfers",
           desc: "Speedy twin-otter and helicopter hops connecting Port Blair to Havelock, and Kochi to Agatti Lagoon in Lakshadweep.",
-          locations: "Andaman & Lakshadweep Atolls"
+          locations: "Andaman & Lakshadweep Atolls",
+          image: "https://images.unsplash.com/photo-1506015391300-4802dc74de2e?q=80&w=800&auto=format&fit=crop"
         }
       ]
     },
@@ -72,50 +80,58 @@ export default function ServicePage({ serviceType, navigate, onOpenEnquiry }) {
         {
           title: "Luxury Sedans & Saloons",
           desc: "Mercedes-Benz E-Class, BMW 5/7 Series, and Audi A6 for smooth city transit, airport transfers, and royal wedding delegations.",
-          locations: "Delhi, Mumbai, Bengaluru, Jaipur"
+          locations: "Delhi, Mumbai, Bengaluru, Jaipur",
+          image: "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?q=80&w=800&auto=format&fit=crop"
         },
         {
           title: "Executive Luxury MPVs",
           desc: "Toyota Vellfire and Innova HyCross lounge editions with reclining captain seats, ambient lighting, and panoramic sunroofs.",
-          locations: "Ideal for Multi-City Family Journeys"
+          locations: "Ideal for Multi-City Family Journeys",
+          image: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?q=80&w=800&auto=format&fit=crop"
         },
         {
           title: "Himalayan 4x4 Expedition Vehicles",
           desc: "Specially modified Toyota Fortuner and Isuzu 4x4 vehicles equipped with supplemental oxygen cylinders and high-ground clearance.",
-          locations: "Ladakh, Spiti, Kinnaur, Sikkim"
+          locations: "Ladakh, Spiti, Kinnaur, Sikkim",
+          image: "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?q=80&w=800&auto=format&fit=crop"
         },
         {
           title: "VIP Luxury Tempo Travellers",
           desc: "Customized 9-seater lounge vans with leather pushback recliners, onboard mini-refrigerators, and Wi-Fi for multi-family tours.",
-          locations: "Available Pan-India"
+          locations: "Available Pan-India",
+          image: "https://images.unsplash.com/photo-1570125909232-eb263c188f7e?q=80&w=800&auto=format&fit=crop"
         }
       ]
     },
     cruises: {
-      tag: "WATERWAYS & COASTAL EXPEDITIONS",
-      title: "Solar Houseboats, River Expeditions & Private Yachts",
-      desc: "From tranquil drifting along Kerala's palm-fringed backwater lagoons to luxury Brahmaputra river journeys and sunset yacht charters off Goa's shores.",
-      image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=1600&auto=format&fit=crop",
+      tag: "OCEAN LINERS & COASTAL EXPEDITIONS",
+      title: "Luxury Cruise Liners, River Expeditions & Solar Houseboats",
+      desc: "Sail across open ocean horizons aboard grand luxury cruise liners, drift along Kerala's tranquil backwater lagoons on private solar houseboats, or chart private sunset yacht voyages along Goa and the Andaman Sea.",
+      image: "https://images.unsplash.com/photo-1548574505-5e239809ee19?q=80&w=1920&auto=format&fit=crop",
       cards: [
+        {
+          title: "Luxury Ocean Cruise Liners",
+          desc: "Multi-deck ocean cruise voyages across Mumbai, Goa, Kochi, and Lakshadweep Atoll featuring oceanview staterooms, sundeck pools, fine dining, and live theater entertainment.",
+          locations: "Mumbai to Goa, Lakshadweep & Kochi",
+          image: "https://images.unsplash.com/photo-1548574505-5e239809ee19?q=80&w=800&auto=format&fit=crop"
+        },
         {
           title: "Private Solar Kettuvallams",
           desc: "Silent electric-motor wooden houseboats with air-conditioned glass bedrooms, private chefs, and serene open sundecks in Kumarakom.",
-          locations: "Kumarakom & Alleppey, Kerala"
+          locations: "Kumarakom & Alleppey, Kerala",
+          image: "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?q=80&w=800&auto=format&fit=crop"
         },
         {
-          title: "Brahmaputra River Expeditions",
-          desc: "Boutique expedition vessels sailing past Kaziranga wildlife shores and tea estates with onboard naturalist lectures.",
-          locations: "Guwahati to Jorhat, Assam"
+          title: "Brahmaputra & Ganges River Expeditions",
+          desc: "Boutique expedition vessels sailing past Kaziranga wildlife shores and ancient riverside ghats with onboard naturalist lectures.",
+          locations: "Guwahati to Jorhat, Assam & Varanasi, UP",
+          image: "https://images.unsplash.com/photo-1559827291-72ee739d0d9a?q=80&w=800&auto=format&fit=crop"
         },
         {
-          title: "Private Yacht Charters in Goa",
+          title: "Private Yacht & Catamaran Charters",
           desc: "Luxury 50-foot catamarans and motor yachts for private dolphin spotting, sunset cocktail cruises, and secluded island barbecue stops.",
-          locations: "Panaji & Mandovi River, Goa"
-        },
-        {
-          title: "Sundarbans Mangrove Safaris",
-          desc: "Eco-cruisers with quiet engines navigating tidal creeks in search of Royal Bengal tigers, estuarine crocodiles, and kingfishers.",
-          locations: "Sundarbans Delta, West Bengal"
+          locations: "Panaji & Mandovi River, Goa & Havelock, Andaman",
+          image: "https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?q=80&w=800&auto=format&fit=crop"
         }
       ]
     },
@@ -128,22 +144,26 @@ export default function ServicePage({ serviceType, navigate, onOpenEnquiry }) {
         {
           title: "Doorstep Document Collection",
           desc: "Our bonded security messengers collect, verify, and notarize your passport and supporting affidavits directly at your home or office.",
-          locations: "Delhi NCR, Mumbai, Bengaluru, Chennai, Hyderabad, Kolkata"
+          locations: "Delhi NCR, Mumbai, Bengaluru, Chennai, Hyderabad, Kolkata",
+          image: "https://images.unsplash.com/photo-1450133064473-71024230f91b?q=80&w=800&auto=format&fit=crop"
         },
         {
           title: "Diplomatic & VIP Fast-Track",
           desc: "Assistance with urgent consular appointments, lounge access at visa centers, and fast-track biometric enrollment.",
-          locations: "Schengen, UK, USA, Japan, UAE, Singapore, Australia"
+          locations: "Schengen, UK, USA, Japan, UAE, Singapore, Australia",
+          image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=800&auto=format&fit=crop"
         },
         {
           title: "Inbound India Tourist e-Visa",
           desc: "Complete pre-clearance and express e-Visa assistance for international visitors, NRI delegations, and destination wedding guests.",
-          locations: "Pan-India 28 International Airports"
+          locations: "Pan-India 28 International Airports",
+          image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=800&auto=format&fit=crop"
         },
         {
           title: "Emergency Travel Clearances",
           desc: "Round-the-clock liaison with regional passport offices and consular desks for urgent business or medical transit.",
-          locations: "Dedicated 24/7 Diplomatic Helpdesk"
+          locations: "Dedicated 24/7 Diplomatic Helpdesk",
+          image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=800&auto=format&fit=crop"
         }
       ]
     }
@@ -192,18 +212,26 @@ export default function ServicePage({ serviceType, navigate, onOpenEnquiry }) {
           <div className="service-cards-grid">
             {current.cards.map((card, idx) => (
               <div key={idx} className="service-card bespoke-card">
-                <div className="service-card-num">0{idx + 1}</div>
-                <h3 className="service-card-title">{card.title}</h3>
-                <p className="service-card-desc">{card.desc}</p>
-                <div className="service-card-locations">
-                  <span>Locations:</span> {card.locations}
+                {card.image && (
+                  <div className="service-card-media">
+                    <img src={card.image} alt={card.title} loading="lazy" className="service-card-img" />
+                    <div className="service-card-scrim"></div>
+                  </div>
+                )}
+                <div className="service-card-content">
+                  <div className="service-card-num">0{idx + 1}</div>
+                  <h3 className="service-card-title">{card.title}</h3>
+                  <p className="service-card-desc">{card.desc}</p>
+                  <div className="service-card-locations">
+                    <span>Locations:</span> {card.locations}
+                  </div>
+                  <button 
+                    className="service-card-cta"
+                    onClick={() => onOpenEnquiry({ packageTitle: `${current.title}: ${card.title}` })}
+                  >
+                    Reserve / Inquire Service →
+                  </button>
                 </div>
-                <button 
-                  className="service-card-cta"
-                  onClick={() => onOpenEnquiry({ packageTitle: `${current.title}: ${card.title}` })}
-                >
-                  Reserve / Inquire Service →
-                </button>
               </div>
             ))}
           </div>
