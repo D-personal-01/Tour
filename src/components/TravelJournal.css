@@ -112,9 +112,22 @@
   font-size: 0.88rem;
   font-weight: 600;
   color: var(--text-primary);
+  min-height: 44px; /* 44px+ tap target (R-03) */
   transition: all var(--transition-fast);
 }
 
 .journal-arrow {
   font-size: 1rem;
+}
+
+@media (max-width: 600px) {
+  .journal-image-box {
+    height: 190px;
+  }
+  .journal-card-body {
+    padding: 1.25rem;
+  }
+  .journal-card-title {
+    font-size: 1.2rem;
+  }
 }

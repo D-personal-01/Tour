@@ -96,10 +96,34 @@
   flex-wrap: wrap;
 }
 
-.b2b-register-btn {
-  padding: 0.95rem 1.85rem;
-}
-
+.b2b-register-btn,
 .b2b-email-btn {
   padding: 0.95rem 1.85rem;
+  min-height: 44px; /* 44px+ tap target (R-03) */
+  touch-action: manipulation;
+}
+
+@media (max-width: 600px) {
+  .b2b-wrapper {
+    padding: 1.25rem;
+    border-radius: var(--radius-md);
+  }
+  .b2b-headline {
+    font-size: 1.6rem;
+  }
+  .b2b-desc {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+  .b2b-cta-group {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+  }
+  .b2b-register-btn,
+  .b2b-email-btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
 }

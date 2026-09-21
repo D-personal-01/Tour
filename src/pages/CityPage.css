@@ -15,14 +15,23 @@
    -------------------------------------------------------------------------- */
 .city-hero-banner {
   position: relative;
-  min-height: 85vh;
+  min-height: min(75dvh, 700px);
   display: flex;
   align-items: flex-end;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding-top: 8rem;
-  padding-bottom: 5.5rem;
+  padding-top: 7.5rem;
+  padding-bottom: 5rem;
+}
+
+@media (max-width: 768px) {
+  .city-hero-banner {
+    min-height: auto;
+    padding-top: 6rem;
+    padding-bottom: 3.5rem;
+    background-attachment: scroll;
+  }
 }
 
 /* Dark cinematic scrim protecting legibility - ZERO milky/white overlays */
@@ -43,6 +52,7 @@
   position: relative;
   z-index: 2;
   max-width: 860px;
+  width: 100%;
 }
 
 /* Breadcrumbs Navigation */
@@ -143,6 +153,19 @@
   align-items: center;
 }
 
+@media (max-width: 600px) {
+  .city-hero-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+  }
+  .city-hero-actions button {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
 /* --------------------------------------------------------------------------
    Quick Facts Strip
    -------------------------------------------------------------------------- */
@@ -151,6 +174,13 @@
   z-index: 10;
   margin-top: -2.5rem;
   padding-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  .city-quick-facts-bar {
+    margin-top: 1.5rem;
+    padding-bottom: 1rem;
+  }
 }
 
 .city-facts-strip {

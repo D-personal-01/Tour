@@ -12,8 +12,9 @@
 
 @media (max-width: 600px) {
   .whatsapp-floating-container {
-    bottom: 1.25rem;
-    right: 1.25rem;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 990;
   }
 }
 
@@ -30,6 +31,15 @@
   justify-content: center;
   box-shadow: 0 8px 24px rgba(200, 164, 93, 0.45);
   transition: all var(--transition-smooth);
+  touch-action: manipulation;
+}
+
+@media (max-width: 600px) {
+  .whatsapp-fab {
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  }
 }
 
 .whatsapp-fab:hover {
@@ -37,6 +47,10 @@
   background: var(--accent-gold-hover);
   color: #FFFFFF;
   box-shadow: 0 12px 30px rgba(200, 164, 93, 0.6);
+}
+
+.whatsapp-fab:active {
+  transform: scale(0.94);
 }
 
 /* Dark Mode: Black & Golden */
@@ -54,9 +68,10 @@
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.85), 0 0 22px rgba(200, 164, 93, 0.55);
 }
 
-/* Chat Box */
+/* Chat Box with Safe Mobile Bounds */
 .whatsapp-chat-box {
   width: 320px;
+  max-width: calc(100vw - 2rem);
   background: var(--bg-surface);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-md);

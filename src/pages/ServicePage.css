@@ -7,13 +7,21 @@
 
 .service-hero-banner {
   position: relative;
-  min-height: 70vh;
+  min-height: min(60vh, 580px);
   display: flex;
   align-items: center;
-  padding: 8.5rem 0 4.5rem 0;
+  padding: 8rem 0 4rem 0;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+}
+
+@media (max-width: 768px) {
+  .service-hero-banner {
+    min-height: auto;
+    padding: 6rem 0 2.5rem 0;
+    background-attachment: scroll;
+  }
 }
 
 .service-hero-overlay {
@@ -27,6 +35,7 @@
   z-index: 2;
   max-width: 920px;
   text-align: center;
+  width: 100%;
 }
 
 .service-breadcrumbs {
@@ -36,7 +45,8 @@
   gap: 0.5rem;
   font-size: 0.82rem;
   color: rgba(255, 255, 255, 0.8);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
 }
 
 .service-breadcrumbs button {

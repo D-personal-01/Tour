@@ -5,17 +5,26 @@
   position: relative;
 }
 
-/* Full Viewport Hero matching Screenshot */
+/* Full Viewport Hero matching Screenshot - Scaled per antislop (R-03) */
 .state-hero-showcase {
   position: relative;
-  min-height: 100vh;
+  min-height: min(85dvh, 800px);
   display: flex;
   align-items: center;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  padding-top: 6rem;
-  padding-bottom: 7rem;
+  padding-top: 7rem;
+  padding-bottom: 5rem;
+}
+
+@media (max-width: 768px) {
+  .state-hero-showcase {
+    min-height: auto;
+    padding-top: 6rem;
+    padding-bottom: 3.5rem;
+    background-attachment: scroll;
+  }
 }
 
 .state-hero-scrim {
@@ -38,6 +47,7 @@
 
 .state-hero-text-block {
   max-width: 680px;
+  width: 100%;
 }
 
 /* Eyebrow Pill Badge */
@@ -54,31 +64,20 @@
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.16em;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
 }
 
 /* Main Serif Headline */
 .state-main-headline {
   font-family: var(--font-serif);
-  font-size: 4.25rem;
-  line-height: 1.12;
+  font-size: clamp(2.1rem, 5.5vw + 0.8rem, 4.25rem);
+  line-height: 1.15;
   font-weight: 600;
   color: #FFFFFF;
   text-shadow: 0 4px 24px rgba(0, 0, 0, 0.8), 0 1px 4px rgba(0, 0, 0, 0.9);
-  margin-bottom: 1.5rem;
-}
-
-@media (max-width: 900px) {
-  .state-main-headline {
-    font-size: 3.25rem;
-  }
-}
-
-@media (max-width: 600px) {
-  .state-main-headline {
-    font-size: 2.35rem;
-  }
+  margin-bottom: 1.25rem;
+  word-break: break-word;
 }
 
 .gold-script-phrase {
@@ -93,27 +92,44 @@
 
 /* Subtext */
 .state-main-subtext {
-  font-size: 1.15rem;
+  font-size: clamp(0.95rem, 1.8vw + 0.4rem, 1.15rem);
   color: #FFFFFF;
   line-height: 1.75;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
   max-width: 580px;
   text-shadow: 0 2px 14px rgba(0, 0, 0, 0.8), 0 1px 3px rgba(0, 0, 0, 0.9);
 }
 
-/* Action Buttons matching screenshot */
+/* Action Buttons */
 .state-hero-actions {
   display: flex;
   align-items: center;
   gap: 1.25rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
   flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+  .state-hero-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+  }
 }
 
 .plan-journey-btn {
   padding: 0.95rem 2.25rem;
   font-size: 0.95rem;
+  min-height: 46px; /* 44px+ tap target (R-03) */
   box-shadow: 0 6px 25px rgba(200, 164, 93, 0.35);
+  touch-action: manipulation;
+}
+
+@media (max-width: 600px) {
+  .plan-journey-btn {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .btn-arrow-icon {
@@ -123,6 +139,15 @@
 .explore-packages-btn {
   padding: 0.95rem 2.25rem;
   font-size: 0.95rem;
+  min-height: 46px;
+  touch-action: manipulation;
+}
+
+@media (max-width: 600px) {
+  .explore-packages-btn {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 /* Slider Pagination Indicator (dash + two dots) */
