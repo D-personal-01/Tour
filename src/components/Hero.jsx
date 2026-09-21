@@ -70,7 +70,7 @@ export default function Hero({ navigate, onOpenEnquiry }) {
       
       <div className="bespoke-container hero-content">
         <div className="pill-badge hero-header-badge">
-          <span>CURATING EXTRAORDINARY JOURNEYS SINCE 2010</span>
+          <span>CURATING PRIVATE JOURNEYS • EST. 2010</span>
         </div>
 
         <h1 className="hero-headline">
@@ -79,7 +79,7 @@ export default function Hero({ navigate, onOpenEnquiry }) {
         </h1>
 
         <p className="hero-subtext">
-          Handcrafted private itineraries tailored to your desires, from the heritage palaces of Rajasthan and misty backwaters of Kerala, to high Himalayan passes and secluded coral atolls.
+          Handcrafted private journeys across India's royal palaces, misty hills, and hidden sanctuaries.
         </p>
 
         {/* Streamlined Airy Search Module */}
@@ -141,7 +141,7 @@ export default function Hero({ navigate, onOpenEnquiry }) {
                 <input
                   id="destination-input"
                   type="text"
-                  placeholder="e.g. Udaipur, Alleppey, Leh, Coonoor..."
+                  placeholder="e.g. Udaipur, Alleppey, Leh, Agra..."
                   value={searchQuery}
                   onChange={(e) => {
                     setSearchQuery(e.target.value);
@@ -230,15 +230,15 @@ export default function Hero({ navigate, onOpenEnquiry }) {
         {/* Quick Proof Highlights */}
         <div className="hero-proof-bar">
           <div className="proof-pill">
-            <span className="proof-accent">50,000+</span> Discerning Travelers Since 2010
+            <span className="proof-accent">50K+</span> Travelers Curated
           </div>
           <div className="proof-dot">•</div>
           <div className="proof-pill">
-            <span className="proof-accent">100%</span> Private Handcrafted Itineraries
+            <span className="proof-accent">100%</span> Private Journeys
           </div>
           <div className="proof-dot">•</div>
           <div className="proof-pill">
-            <span className="proof-accent">24/7</span> Dedicated On-Trip Concierge
+            <span className="proof-accent">24/7</span> Dedicated Concierge
           </div>
         </div>
       </div>
