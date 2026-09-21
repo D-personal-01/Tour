@@ -12,7 +12,7 @@ export default function TravelInsuranceTeaser({ navigate }) {
               Compare Tailored Domestic Travel Insurance
             </h2>
             <p className="teaser-description">
-              True luxury is complete peace of mind. Whether you are trekking high passes in Ladakh, cruising quiet backwaters with family, or embarking on a sacred pilgrimage, our insurance plans provide cashless medical assistance across 6,500+ hospitals, flight delay relief, and emergency baggage protection.
+              Complete peace of mind with cashless hospital care, flight delay relief, and emergency baggage protection.
             </p>
 
             <div className="teaser-features-row">
@@ -20,21 +20,21 @@ export default function TravelInsuranceTeaser({ navigate }) {
                 <span className="teaser-feat-icon">🛡</span>
                 <div>
                   <strong>Cashless Medical</strong>
-                  <span>Up to ₹25 Lakhs coverage</span>
+                  <span>Up to ₹25 Lakhs</span>
                 </div>
               </div>
               <div className="teaser-feat">
                 <span className="teaser-feat-icon">✈</span>
                 <div>
-                  <strong>Flight & Baggage Delay</strong>
-                  <span>Instant claim reimbursement</span>
+                  <strong>Flight & Baggage</strong>
+                  <span>Instant reimbursement</span>
                 </div>
               </div>
               <div className="teaser-feat">
                 <span className="teaser-feat-icon">🏔</span>
                 <div>
                   <strong>Adventure Rider</strong>
-                  <span>High-altitude evacuation</span>
+                  <span>Mountain evacuation</span>
                 </div>
               </div>
             </div>
@@ -44,10 +44,10 @@ export default function TravelInsuranceTeaser({ navigate }) {
                 className="btn-primary compare-insurance-btn"
                 onClick={() => navigate('insurance')}
               >
-                Compare Travel Insurance Plans
+                Compare Insurance Plans
                 <span className="btn-arrow" aria-hidden="true">→</span>
               </button>
-              <span className="teaser-guarantee">Instant digital policy delivery within 5 minutes</span>
+              <span className="teaser-guarantee">Instant digital policy delivery in 5 minutes</span>
             </div>
           </div>
 

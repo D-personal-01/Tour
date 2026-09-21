@@ -8,10 +8,10 @@ export default function WhyChooseUs({ onOpenEnquiry }) {
         {/* Section Header */}
         <div className="section-header">
           <span className="section-label">A PROMISE SINCE 2010</span>
-          <h2 className="section-title">What Makes The Travel Bespoke India's Favorite Travel Curator</h2>
+          <h2 className="section-title">Why Choose The Travel Bespoke</h2>
           <div className="gold-divider"></div>
           <p className="section-desc">
-            We do not sell pre-packaged group tours. For over 14 years, our team has curated intimate, private travel memories tailored to individual travelers, couples, and multi-generational families.
+            Zero group tours. Purely private journeys tailored around your rhythm and style.
           </p>
         </div>
 
@@ -28,7 +28,7 @@ export default function WhyChooseUs({ onOpenEnquiry }) {
             </div>
             <h3 className="audience-title">Crafted for Families</h3>
             <p className="audience-desc">
-              Spacious private heritage suites, child-friendly safari jeeps, vetted chauffeurs, and paced itineraries that respect both grandparents and young children.
+              Private palace suites, child-friendly safaris, vetted chauffeurs, and relaxed pacing.
             </p>
             <div className="audience-tags">
               <span>Interconnecting Rooms</span>
@@ -46,7 +46,7 @@ export default function WhyChooseUs({ onOpenEnquiry }) {
             </div>
             <h3 className="audience-title">Crafted for Honeymoons</h3>
             <p className="audience-desc">
-              Secluded pool villas in Kerala and Andaman, private dinner setups on lake terraces in Udaipur, stargazing glamping domes in Ladakh, and total discretion.
+              Secluded pool villas, private lake-terrace dinners, and intimate retreats with total discretion.
             </p>
             <div className="audience-tags">
               <span>Private Plunge Pools</span>
@@ -63,12 +63,12 @@ export default function WhyChooseUs({ onOpenEnquiry }) {
             </div>
             <h3 className="audience-title">Crafted for Solo Explorers</h3>
             <p className="audience-desc">
-              Safe, deeply researched explorations across ancient monastic trails, living root bridges, and wildlife reserves with licensed local historians and naturalists.
+              Curated boutique lodges, expert local naturalists, and round-the-clock personal assistance.
             </p>
             <div className="audience-tags">
               <span>Boutique Eco-Lodges</span>
               <span>Verified Chauffeurs</span>
-              <span>24/7 SOS Desk</span>
+              <span>24/7 Support</span>
             </div>
           </div>
         </div>
@@ -78,33 +78,29 @@ export default function WhyChooseUs({ onOpenEnquiry }) {
           <div className="metric-box">
             <span className="metric-number">2010</span>
             <span className="metric-label">Year Established</span>
-            <span className="metric-sub">Over 14 years of curated travel</span>
           </div>
           <div className="metric-divider"></div>
           <div className="metric-box">
             <span className="metric-number">50K+</span>
             <span className="metric-label">Happy Travelers</span>
-            <span className="metric-sub">Across 28 Indian States & UTs</span>
           </div>
           <div className="metric-divider"></div>
           <div className="metric-box">
             <span className="metric-number">100%</span>
             <span className="metric-label">Private Journeys</span>
-            <span className="metric-sub">Zero shared tour buses or rushed schedules</span>
           </div>
           <div className="metric-divider"></div>
           <div className="metric-box">
             <span className="metric-number">24/7</span>
             <span className="metric-label">On-Trip Support</span>
-            <span className="metric-sub">Dedicated human concierge assignment</span>
           </div>
         </div>
 
         {/* CTA Banner */}
         <div className="why-cta-wrapper">
           <div className="why-cta-text">
-            <h3>Ready for an itinerary built solely around your preferences?</h3>
-            <p>Speak directly with our senior travel curators in New Delhi, Mumbai, or Bengaluru.</p>
+            <h3>Ready for an itinerary built around you?</h3>
+            <p>Speak directly with our senior travel curators.</p>
           </div>
           <button className="btn-primary" onClick={() => onOpenEnquiry()}>
             Speak to a Concierge

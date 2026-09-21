@@ -25,7 +25,7 @@ export default function PopularDestinations({ navigate }) {
           <h2 className="section-title">Popular Domestic Destinations</h2>
           <div className="gold-divider"></div>
           <p className="section-desc">
-            Hand-selected sanctuaries across the Indian subcontinent. Tap any state to discover its bespoke cities, private heritage estates, and individual regional themes.
+            Hand-selected heritage estates, backwaters, and mountain sanctuaries across India.
           </p>
         </div>
 
@@ -84,7 +84,7 @@ export default function PopularDestinations({ navigate }) {
                         color: state.theme.accent 
                       }}
                     >
-                      {state.cities.length} Cities / Havens
+                      {state.cities.length} Destinations
                     </span>
                   </div>
                 </div>
@@ -93,7 +93,7 @@ export default function PopularDestinations({ navigate }) {
                   <div className="dest-region-tag">{state.region}</div>
                   <h3 className="dest-card-title">{state.name}</h3>
                   <p className="dest-card-cities">
-                    <span className="dest-cities-label">Featuring:</span> {cityNames}{state.cities.length > 3 ? ` & ${state.cities.length - 3} more` : ''}
+                    {cityNames}{state.cities.length > 3 ? ` & ${state.cities.length - 3} more` : ''}
                   </p>
                   <p className="dest-card-vibe">{state.vibe}</p>
 

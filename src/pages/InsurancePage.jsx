@@ -21,20 +21,20 @@ export default function InsurancePage({ navigate, onOpenEnquiry }) {
 
   const faqs = [
     {
-      q: "How does cashless hospitalization operate during domestic travel across India?",
-      a: "Our network connects directly to over 6,500 accredited hospitals across all 28 states and union territories. In the event of an emergency, present your digital policy e-card and government ID at the hospital's insurance/TPA desk. The hospital coordinates directly with our emergency claims division for approval without requiring upfront out-of-pocket cash deposits."
+      q: "How does cashless hospitalization operate across India?",
+      a: "Present your digital policy card at any of 6,500+ network hospitals for direct cashless admission without upfront out-of-pocket deposits."
     },
     {
-      q: "Is emergency helicopter rescue included for high-altitude destinations like Ladakh or Spiti?",
-      a: "Yes. The Himalayan & Adventure Rider plan explicitly includes emergency helicopter and air ambulance rescue up to ₹20 Lakhs. Our 24/7 mountain desk coordinates directly with local district authorities and civilian helicopter operators to arrange immediate evacuation to military or tertiary hospitals in Leh, Srinagar, or Chandigarh."
+      q: "Is emergency helicopter rescue included for high altitudes?",
+      a: "Yes. The Adventure Rider plan includes emergency air and helicopter rescue up to ₹20 Lakhs in Ladakh, Spiti, and Himalayan passes."
     },
     {
-      q: "What documentation is required to claim flight delay or baggage loss compensation?",
-      a: "Keep your airline boarding passes, checked luggage tags, and obtain a Property Irregularity Report (PIR) or delay certificate from the airline customer service counter at the arrival airport. Submit photos of these documents via our digital concierge claim portal for reimbursement within 48 hours."
+      q: "What documentation is required for delay or baggage claims?",
+      a: "Submit photos of your boarding passes, bag tags, and airline delay report (PIR) via our portal for claim processing within 48 hours."
     },
     {
-      q: "Can insurance be added directly to an existing bespoke travel package?",
-      a: "Yes. When booking any private journey with The Travel Bespoke, you can elect to bundle your selected insurance tier. The policy documents and digital emergency assistance cards are issued alongside your final travel vouchers."
+      q: "Can insurance be added directly to an existing package?",
+      a: "Yes. Any insurance tier can be bundled seamlessly into your customized itinerary and digital travel vouchers."
     }
   ];
 
@@ -53,7 +53,7 @@ export default function InsurancePage({ navigate, onOpenEnquiry }) {
           <h1 className="insurance-title">Compare Domestic Travel Insurance Plans</h1>
           <div className="gold-divider"></div>
           <p className="insurance-subtext">
-            Every bespoke journey deserves robust protection. Compare tailored medical, cancellation, baggage, and high-altitude expedition covers with cashless claims across India.
+            Cashless medical, cancellation, baggage, and expedition protection across India.
           </p>
         </div>
       </section>

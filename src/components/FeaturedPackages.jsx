@@ -25,7 +25,7 @@ export default function FeaturedPackages({ navigate, onOpenEnquiry }) {
           <h2 className="section-title">Featured & Best Selling Packages</h2>
           <div className="gold-divider"></div>
           <p className="section-desc">
-            Hand-picked itineraries designed by senior travel specialists. Each journey can be customized down to hotel suites, private dining venues, and daily excursion timing.
+            Hand-picked luxury itineraries, fully customizable to your pace and preferences.
           </p>
         </div>
 

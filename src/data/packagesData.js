@@ -14,12 +14,11 @@ export const packagesData = [
     price: "From ₹88,000 per person",
     image: "https://images.unsplash.com/photo-1599661046289-e31897846e41?q=80&w=1000&auto=format&fit=crop",
     highlights: [
-      "Private guided walkthrough of Amber Fort and City Palace",
-      "Sunset boat ride on Lake Pichola with Jag Mandir views",
-      "Exclusive vintage car transfer in Udaipur",
-      "Chauffeured luxury sedan across Jaipur, Jodhpur, and Udaipur"
+      "Amber Fort & City Palace private guided tour",
+      "Lake Pichola sunset boat charter",
+      "Chauffeured luxury sedan across Jaipur & Udaipur"
     ],
-    inclusions: ["5-Star Palace Stays", "Private Chauffeur", "Daily Royal Breakfasts", "Heritage Monument Entries", "24/7 Concierge"]
+    inclusions: ["5-Star Palace Stays", "Private Chauffeur", "Royal Breakfasts"]
   },
   {
     id: "kerala-backwaters-and-spice-mist",
@@ -34,12 +33,11 @@ export const packagesData = [
     price: "From ₹72,000 per person",
     image: "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?q=80&w=1000&auto=format&fit=crop",
     highlights: [
-      "Overnight stay on a private luxury solar houseboat in Kumarakom",
-      "High-altitude private tea bungalow living in Munnar",
-      "Fort Kochi colonial walking tour and spice warehouse dinner",
-      "Authentic herbal Ayurvedic revitalization session"
+      "Private luxury solar houseboat in Kumarakom",
+      "Tea bungalow living in Munnar hills",
+      "Authentic Ayurvedic revitalization session"
     ],
-    inclusions: ["Private Houseboat", "Plantation Villa Stays", "All Meals on Cruise", "Spice Garden Passes", "Dedicated Chauffeur"]
+    inclusions: ["Private Houseboat", "Plantation Villa Stays", "All Meals on Cruise"]
   },
   {
     id: "kashmir-paradise-and-houseboat",
@@ -54,12 +52,11 @@ export const packagesData = [
     price: "From ₹79,000 per person",
     image: "https://images.unsplash.com/photo-1598091383021-15ddea10925d?q=80&w=1000&auto=format&fit=crop",
     highlights: [
-      "Cedar wood heritage luxury houseboat on quiet Nigeen Lake",
-      "Phase 2 Gulmarg Gondola access to Apharwat peak",
-      "Pahalgam riverside meadow walk and trout fishing session",
-      "Private pashmina weaving demonstration with master artisans"
+      "Cedar wood luxury houseboat on quiet Nigeen Lake",
+      "Gulmarg Gondola Phase 2 alpine summit",
+      "Pahalgam riverside meadow & pine trail"
     ],
-    inclusions: ["Heritage Houseboat & 5-Star Resorts", "Gondola Phase 1 & 2 Passes", "Heated Private Vehicle", "Curated Kashmiri Wazwan Meal"]
+    inclusions: ["Heritage Houseboat & 5-Star Resorts", "Gondola Passes", "Heated Private Vehicle"]
   },
   {
     id: "ladakh-sky-trail-and-pangong",
@@ -74,12 +71,11 @@ export const packagesData = [
     price: "From ₹95,000 per person",
     image: "https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?q=80&w=1000&auto=format&fit=crop",
     highlights: [
-      "Acclimatization retreat with private Buddhist monk chant sessions",
-      "Luxury glamping domes beside Pangong Lake under Milky Way skies",
-      "Bactrian double-humped camel desert ride in Hunder dunes",
-      "Oxygen-equipped 4x4 expedition vehicle throughout the route"
+      "Luxury dome glamping by Pangong Lake",
+      "Monastery dawn chants & monk blessing",
+      "Nubra Valley Bactrian camel safari"
     ],
-    inclusions: ["Luxury Heated Camps & Hotels", "Inner Line Permits", "Oxygen-Equipped 4x4", "Astronomer-Guided Stargazing Session"]
+    inclusions: ["Luxury Heated Camps", "Inner Line Permits", "Oxygen-Equipped 4x4"]
   },
   {
     id: "andaman-azure-lagoon-escape",
@@ -94,12 +90,11 @@ export const packagesData = [
     price: "From ₹68,000 per person",
     image: "https://images.unsplash.com/photo-1589308078059-be1415eab4c3?q=80&w=1000&auto=format&fit=crop",
     highlights: [
-      "Private catamaran transfers between Port Blair and Havelock",
-      "Beachfront pool villa steps from Radhanagar sunset shore",
-      "Scuba diving instruction with PADI certified dive masters",
-      "Candlelight beach dining under coastal canopies"
+      "Radhanagar beachfront pool villa",
+      "Private catamaran island transfers",
+      "PADI-certified guided reef scuba dive"
     ],
-    inclusions: ["Premium Island Resorts", "Speed Catamaran Tickets", "Scuba Gear & Guide", "Daily Coastal Breakfasts"]
+    inclusions: ["Premium Island Resorts", "Speed Catamaran", "Scuba Gear & Guide"]
   },
   {
     id: "himachal-cedar-alpine-retreat",
@@ -114,11 +109,10 @@ export const packagesData = [
     price: "From ₹62,000 per person",
     image: "https://images.unsplash.com/photo-1597074866923-dc0589150358?q=80&w=1000&auto=format&fit=crop",
     highlights: [
-      "Stay in heritage colonial mountain suites with cedar wood fireplaces",
-      "Private guided walk along Shimla's historic British heritage trail",
-      "Solang Valley alpine ropeway and apple orchard picnic",
-      "Scenic riverfront lunch by the rushing Beas River"
+      "Colonial mountain suites with cedar fireplaces",
+      "Shimla private heritage walking trail",
+      "Solang Valley alpine ropeway & orchard picnic"
     ],
-    inclusions: ["Heritage Suites", "All Private Transfers", "Fireplace Service & High Tea", "Valley Sightseeing Permits"]
+    inclusions: ["Heritage Suites", "Private Transfers", "High Tea & Breakfast"]
   }
 ];

@@ -12,7 +12,7 @@ export default function TravelJournal({ navigate }) {
           <h2 className="section-title">Curated Stories & Travel Journal</h2>
           <div className="gold-divider"></div>
           <p className="section-desc">
-            Deep-dive accounts written by on-ground travel writers, botanists, and historians uncovering overlooked sanctuaries and living traditions.
+            Field stories and insider perspectives from across the Indian subcontinent.
           </p>
         </div>
 

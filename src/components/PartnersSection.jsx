@@ -18,19 +18,19 @@ export default function PartnersSection() {
 
   const quotations = [
     {
-      quote: "Our Rajasthan trip with our parents and two young children was handled with exceptional sensitivity. The private palace suites and unhurried daily drives made the journey enjoyable for three generations.",
+      quote: "Our Rajasthan family journey was seamless. The private palace suites and unhurried drives made it effortless for three generations.",
       author: "Dr. Vikram & Sunita Mehra",
       trip: "7-Day Royal Rajasthan Family Journey",
       city: "Bengaluru, India"
     },
     {
-      quote: "The solar houseboat in Kumarakom and the candlelit terrace in Munnar were completely secluded. The concierge coordinated every transfer without a single minute of delay.",
+      quote: "The private houseboat in Kumarakom was magical. Every transfer was coordinated without a single minute of delay.",
       author: "Aditya & Priyadarshini Rao",
       trip: "6-Day Kerala Honeymoon Retreat",
       city: "Mumbai, India"
     },
     {
-      quote: "Traveling solo through Spiti and Ladakh can be daunting. Having an oxygen-equipped 4x4 and vetted homestay hosts who knew the local monks personally gave me tremendous confidence.",
+      quote: "Traveling solo through Ladakh felt completely secure with vetted local hosts and our private 4x4.",
       author: "Meera Sen",
       trip: "Ladakh High Passes Expedition",
       city: "Kolkata, India"
@@ -46,7 +46,7 @@ export default function PartnersSection() {
           <h2 className="section-title">Our Airline & Hospitality Partners</h2>
           <div className="gold-divider"></div>
           <p className="section-desc">
-            Direct partnerships negotiated since 2010 ensure our clients receive VIP check-ins, complimentary room upgrades where available, and verified safety standards.
+            Direct airline and palace partnerships delivering VIP privileges and preferred access.
           </p>
         </div>
 
